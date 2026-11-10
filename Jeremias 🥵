@@ -1,0 +1,1440 @@
+<img width="511" height="600" alt="562" src="https://github.com/user-attachments/assets/6a35ac1d-5ab0-4b31-81e2-e2ef1ad2314f" />
+# aroma v0.0.3
+#### a game engine
+Leaf Corcoran, 2012
+
+<http://leafo.net/aroma/>
+[Changelog](http://leafo.net/aroma/changelog.html)
+
+## About
+
+Aroma is game creation framework/platform that targets [Chrome's Native
+Client][1]. It lets you create games that can be distributed through the Chrome
+Web Store.
+
+Aroma games are written in the Lua programming language.
+
+Aroma implements the [LÖVE][2] API in order to make porting existing games
+easy.
+
+## How it works
+
+Upload Aroma's `.nexe` binaries, `.nmf` file, and javascript support to a
+directory. Then upload your entire game (Lua code, images, and audio) alongside
+it and write a simple html file.
+
+See the [tutorial][3] for a more detailed guide.
+
+Aroma facilitates resource loading for you. It also handles drawing to an
+OpenGL powered canvas. Aroma will reuse features of the browser whenever
+possible, for things like decoding images, playing audio and downloading code.
+
+## Dependencies
+
+* [Lua 5.1](http://lua.org)
+* [Lua CJSON](http://www.kyne.com.au/~mark/software/lua-cjson.php)
+
+## How To Build
+
+Building can be a bit challenging, but here is a brief overview. I build Aroma
+on Linux. It should work on OSX. If you're on Windows you're on your own! (But
+if you figure it out, tell me and I'll update this guide)
+
+The following dependencies are required before building:
+
+ * [tup](http://gittup.org/tup/index.html) -- the build system
+ * [git](http://git-scm.com) -- used in the 32 bit build script
+ * [NaCL SDK](https://developers.google.com/native-client/sdk/download) -- Pepper 18
+ * [moonscript-dev-1](http://moonscript.org/#source)
+ * [CoffeeScript](http://coffeescript.org)
+ * [xxd](http://linux.die.net/man/1/xxd)
+
+*If you want to build the website (which you probably don't), you need
+[sitegen](http://leafo.net/sitegen) and [lessphp](http://leafo.net/lessphp)*
+
+After all the dependencies are set up, head into the `nacl` folder and run:
+
+    $ ./installs_deps
+
+This will download and extract Lua 5.1.2 and Lua CJSON.
+
+Next, head to the root directory, set up tup and tell it to build!
+
+    $ tup init
+    $ tup upd
+
+By default this will build the 64 bit version of Aroma. I've provided a
+makefile in the `nacl` folder with a directive for building 32 bit, just run:
+
+    $ make 32
+
+If you want to make tup build 32 by default then edit `tup.config` in the root
+directory, and uncomment the line:
+
+    CONFIG_NACL_ARCH=i686
+
+And finally, I use tup for this reason, run this command:
+
+    $ tup monitor -a -f
+
+This watches the filesystem and builds what's needed when you change something.
+
+  [1]: https://developers.google.com/native-client/
+  [2]: http://love2d.org
+  [3]: http://leafo.net/aroma/tutorial.html
+
+Bancos Tradicionais e Públicos
+
+• Banco do Brasil: bb.com.br
+• Caixa Econômica Federal: caixa.gov.br
+• Itaú Unibanco: itau.com.br
+• Banco Original: original.com.br
+• Banco ABC Brasil: abcbrasil.com.br
+
+Bancos Digitais
+
+• C6 Bank: c6bank.com.br
+
+Órgãos e Entidades Reguladoras
+
+• Banco Central do Brasil: bcb.gov.br
+• Febraban (Federação Brasileira de Bancos): portal.febraban.org.br
+Banco do Brasil
+Pra Você | Banco do Brasil
+Banco do Brasil oferece: Move Brasil Táxi e Motoristas (crédito para veículo); Seguro Proteção Pessoal Motorista; Crédito direto no App; Minhas Finanças (contro...
+FEBRABAN - Home
+FEBRABAN - Home
+Notícias: Febraban Tech 2027 lançado com 100% de cotas e estandes reservados (358 áreas); Seminário sobre futuro do relacionamento bancos-consumidor; Meu Bolso ...
+Banco Central do Brasil
+Banco Central do Brasil
+Banco Central do Brasil. Essa pagina depende do javascript para abrir, favor habilitar o javascript do seu browser! * Ir para o conteúdo 1. * Ir para o menu 2. ...
+GOV.BR
+Banco Central do Brasil (BCB) - Portal Gov.br
+Banco Central do Brasil (BCB). Publicado em 28/09/2023 18h21 Atualizado em 29/01/2026 11h24. Vida Financeira Consultar e solicitar a devolução de Valores a Rece...
+Itau
+Abra sua conta no Banco Itaú: Soluções financeiras para você
+Serviços Digitais: Emissão de 2ª via de boleto, desbloqueio de cartão, fatura digital, comprovantes e atendimento. Produtos Financeiros: Renegociação Itaú, Créd...
+Caixa
+CAIXA
+Produtos para Você. Cartões CAIXA · Contas · Crédito Rural · Empréstimo e Financiamento · Habitação · Investimentos · Loterias · Microcrédito · Negocie sua dívi...
+Banco Original
+Banco Original
+Um banco completo com soluções para todos os seus negócios. Há mais de 10 anos atuando no segmento Corporate, Agronegócio e Middle, o Original, braço financeiro...
+Banco ABC Brasil
+Banco ABC Brasil
+Banco ABC Brasil: financial solutions provider in São Paulo. Services for companies: - Gestão financeira: multidisciplinary team for business growth. - Investme...
+C6 Bank
+C6 Bank: Banco completo no Brasil e no mundo
+* C6 Bank: sociedade com JPMorganChase. * Lucro líquido: R$ 1,3 bi no 1º Sem. de 2026. * Cartões e pontos: C6 Carbon (até 3,5 pts/US$ 1), C6 Black (até 2,5 pts/Copyright © 2019 by Mindhunters, Inc.
+Título original: The killer across the table
+Todos os direitos reservados.
+Todos os direitos desta publicação são reservados à Casa dos
+Livros Editora LTDA. Nenhuma parte desta obra pode ser
+apropriada e estocada em sistema de banco de dados ou
+processo similar, em qualquer forma ou meio, seja eletrônico,
+de fotocópia, gravação etc., sem a permissão do detentor do
+copyright.
+Diretora editorial: Raquel Cozer
+Gerente editorial: Alice Mello
+Editor: Ulisses Teixeira
+Copidesque: Isabela Sampaio
+Revisão: André Sequeira
+Capa: Guilherme Peres
+Diagramação: Abreu’s System
+Conversão de e-book: Guilherme Peres
+CIP-Brasil. Catalogação na Publicação
+Sindicato Nacional dos Editores De Livros, RJ
+D768d
+Douglas, John
+De frente com o serial killer / John Douglas, Mark Olshaker ;
+tradução Isabella Pacheco. – 1. ed. – Rio de Janeiro : Harper Collins,
+2019.
+Tradução de: The killer across the table
+ISBN: 9788595086142 1. Homicídios em série. 2. Investigação criminal. I. Olshaker, Mark.
+II. Pacheco, Isabella. III. Título.
+19-58057
+CDD: 364.1523
+CDU: 343.61
+Vanessa Mafra Xavier Salgado – Bibliotecária – CRB-7/6644
+Os pontos de vista desta obra são de responsabilidade de seu
+autor, não refletindo necessariamente a posição da
+HarperCollins Brasil, da HarperCollins Publishers ou de sua
+equipe editorial.
+HarperCollins Brasil é uma marca licenciada à Casa dos
+Livros Editora LTDA.
+Todos os direitos reservados à Casa dos Livros Editora LTDA.
+Rua da Quitanda, 86, sala 218 — Centro
+Rio de Janeiro, RJ — CEP 20091-005
+Tel.: (21) 3175-1030
+www.harpercollins.com.br Dedico este livro com amor e admiração à memória de Joan
+Angela D’Alessandro e em homenagem a Rosemarie D’Alessandro
+e a todas as pessoas que, através de sua inspiração, coragem e
+determinação, lutam por justiça e segurança para as crianças SUMÁRIO
+EM UMA PEQUENA SALA NA PRISÃO
+INTRODUÇÃO
+I. O SANGUE DOS INOCENTES
+1. A GAROTA PERDIDA
+2. “EU DORMI BEM”
+3. A MENTE DO ASSASSINO
+4. DECADÊNCIA HUMANA
+5. O QUE DIZEM OS PSIQUIATRAS
+6. RAIVA VERMELHA E RAIVA BRANCA
+7. A CONCLUSÃO
+8. “GRANDE PROBABILIDADE”
+9. O LEGADO DE JOAN
+II. “PARA MIM, MATAR ERA ALGO INSTINTIVO”
+10. TUDO EM FAMÍLIA
+11. O VOLKSWAGEN ABANDONADO
+12. DO LADO DE DENTRO DOS MUROS 13. “A CONVENIÊNCIA DA SITUAÇÃO”
+14. “HOUVE VÍTIMAS NO MEIO DO CAMINHO”
+15. PODER, CONTROLE, EXCITAÇÃO
+III. O ANJO DA MORTE
+16. BRINCANDO DE DEUS
+17. TURNO DA NOITE
+18. COMO SE TORNAR UM ASSASSINO
+19. “EU NÃO MUDEI ABSOLUTAMENTE NADA”
+20. ANJO CAÍDO
+IV. “NINGUÉM ME OBRIGOU A FAZER NADA”
+21. OS ASSASSINATOS DA SUPERBIKE
+22. O QUE ACONTECEU COM KALA E CHARLIE?
+23. O QUE DESPERTOU A RAIVA DE TODD?
+24. “BOAS OU RUINS, QUERO SABER MESMO ASSIM”
+25. ORGANIZADO VERSUS DESORGANIZADO
+26. NATUREZA E CRIAÇÃO
+EPÍLOGO
+AGRADECIMENTOS EM UMA PEQUENA SALA NA PRISÃO
+Aqui não importa tanto Quem fez?, e sim Por que fez?
+No fim, se descobrirmos Por quê? e acrescentarmos Como?,
+também desvendaremos Quem?, uma vez que Por quê? + Como? =
+Quem.
+O objetivo não é ser amigo. O objetivo não é ser inimigo. O objetivo
+é descobrir a verdade.
+É uma partida de xadrez verbal e mental sem peças, uma sessão de
+treinamento sem contato corporal, uma prova de resistência na qual
+cada lado busca e explora as fraquezas e inseguranças do oponente.
+Sentamos um de frente para o outro diante de uma pequena mesa
+em uma sala com luz baixa cujas paredes de tijolos são pintadas de
+um cinza-azulado pálido. A única janela fica na porta de ferro
+trancada, pequena e reforçada com uma tela de metal. Um guarda
+uniformizado observa do outro lado, certificando-se de que tudo
+esteja em ordem.
+Em uma prisão de segurança máxima, essa é a premissa mais
+importante.
+Nós já estamos nessa conversa há duas horas quando, enfim, o
+momento chega.
+“Quero saber, nas suas palavras, como tudo aconteceu há 25 anos.
+Como você veio parar aqui? A garota, Joan, você a conhecia?”
+“Já tinha visto ela pela vizinhança”, responde ele. Sua postura era
+calma, e o tom de voz, tranquilo.
+“Vamos voltar ao momento em que ela bateu na sua porta. Diga-
+me o que aconteceu, passo a passo, a partir daí.” É quase como uma hipnose. A sala fica em silêncio, e o vejo se
+transformar na minha frente. Até sua aparência física parece mudar
+diante dos meus olhos. O olhar fica desfocado, atravessa-me e paira
+na parede vazia. Ele está voltando para outro tempo e lugar; para a
+única história que nunca saiu de sua cabeça.
+A sala está muito fria e, apesar de eu estar de paletó, faço um
+esforço para não tremer. Porém, conforme reconta a história, o
+homem começa a transpirar. Sua respiração fica cada vez mais forte e
+audível. Logo a camisa dele está ensopada de suor e, por baixo dela, os
+músculos do peito estremecem.
+Ele relata tudo dessa maneira, sem olhar para mim, como se
+estivesse falando sozinho. Ele está em uma espécie de transe, naquela
+hora e naquele local, pensando agora no que pensava no momento.
+Por um instante, ele se vira para me encarar. Olha no fundo dos
+meus olhos e diz:
+“John, quando ouvi a batida na porta, olhei pelo vidro e vi quem
+estava ali, eu sabia que ia matá-la.” INTRODUÇÃO APRENDENDO COM ESPECIALISTAS
+Este é um livro sobre a forma que os predadores violentos pensam —
+o alicerce dos meus 25 anos de trabalho como agente especial do FBI,
+pesquisador de perfis comportamentais e analista investigativo
+criminal, além do trabalho que tenho feito desde que me aposentei.
+No entanto, também é um livro sobre conversas que tive. Afinal,
+foi através delas que tudo começou. Ao conversar, aprendi a usar o
+pensamento de um serial killer para ajudar oficiais da polícia a
+capturá-lo e levá-lo à justiça. Para mim, esse foi o início do trabalho
+de análise de perfis comportamentais.
+Iniciei o processo de entrevistar criminosos violentos
+encarcerados pelo que eu considerava uma necessidade pessoal e
+institucional, mas, de muitas maneiras, tudo começou com um desejo
+de entender as motivações ocultas desses criminosos. Como a
+maioria dos agentes especiais do FBI, fui designado para trabalhar
+nas ruas. Meu primeiro cargo foi em Detroit. Desde o início, tinha
+interesse em saber por que as pessoas cometiam crimes — não
+apenas no fato de os cometerem, mas por que praticavam tipos
+específicos.
+Detroit era uma cidade violenta, e, enquanto estive lá, cobríamos
+até cinco roubos de banco por dia. Roubar um banco protegido pela
+Federal Deposit Insurance Corporation é um crime federal, então a
+jurisdição recai sobre o FBI, e muitos agentes eram designados para
+investigar esses casos, além de trabalharem em suas outras funções.
+No momento em que capturávamos um suspeito e líamos os seus
+direitos, em geral, no banco de trás de um carro do FBI ou da polícia
+local, eu o enchia de perguntas. Por que roubar um banco onde a
+segurança é acirrada e tudo é filmado, em vez de uma loja com alto giro de caixa? Por que este banco específico? Por que nestes dia e
+horário? O roubo foi planejado ou espontâneo? Você vigiou o banco
+antes e/ou fez uma vistoria por dentro? Comecei a catalogar as
+respostas e a desenvolver “perfis” informais (embora o termo ainda
+não fosse usado) de tipos de assaltantes. Comecei a ver a diferença
+entre crimes planejados e não planejados, organizados e
+desorganizados.
+Chegamos ao ponto de começar a prever quais agências estavam
+localizadas em lugares com maior probabilidade de roubo e quando.
+Em áreas com muitos prédios, por exemplo, aprendemos que o fim da
+manhã de sexta-feira era um horário provável para se assaltar um
+banco, pois havia muito dinheiro sendo manuseado para descontar os
+cheques semanais dos trabalhadores de construção. Usamos esse tipo
+de inteligência para aumentar a segurança em alguns pontos e
+aguardar em outros, se achássemos que tínhamos chances de pegar
+assaltantes no ato.
+Durante meu segundo cargo, em Milwaukee, fui enviado para a
+nova e moderna Academia do FBI em Quantico, na Virgínia, para
+fazer um curso de duas semanas sobre negociação envolvendo reféns.
+Os agentes especiais Howard Teten e Patrick Mullany, mestres da
+ciência comportamental do FBI, foram meus professores. A aula
+principal se chamava Criminologia Aplicada. Era uma tentativa de
+trazer a disciplina acadêmica de psicologia anormal para a análise de
+crimes e treinamento de novos agentes. Mullany via a negociação
+envolvendo reféns como o primeiro uso prático do programa de
+psicologia aplicada. Era um movimento inédito na luta contra a nova
+era do crime, que envolvia sequestros de aviões em pleno ar e roubos
+de banco com reféns, como o assalto ao banco em Brooklyn em 1972
+que inspirou o filme com Al Pacino, Um dia de cão. Era uma grande
+vantagem para o negociador saber o que se passava na cabeça de um
+criminoso que mantinha reféns, e isso salvava vidas. Eu era um dos
+cerca de cinquenta agentes especiais da primeira turma daquele tipo
+de curso, que dava início a um experimento ousado no treinamento do FBI. O lendário diretor J. Edgar Hoover havia morrido três anos
+antes, mas sua imensa sombra ainda pairava sobre a agência.
+Mesmo nos últimos anos, Hoover manteve o controle da agência
+que havia, essencialmente, criado com mão de ferro. Sua abordagem
+pragmática e dura à investigação ecoava o antigo programa de TV
+Dragnet: Somente os fatos. Tudo precisava ser medido e quantificado
+— prisões, condenações, casos resolvidos. Ele jamais teria
+incentivado algo tão impressionista, indutivo e “sensitivo” quanto a
+ciência comportamental. Na verdade, ele a teria considerado uma
+contradição em termos.
+Enquanto frequentei o curso de negociação envolvendo reféns na
+Academia do FBI, meu nome percorreu a Unidade de Ciência
+Comportamental, e, antes de voltar para Milwaukee, recebi propostas
+para trabalhar nas Unidades de Ciência Comportamental e
+Educacional. Apesar de nosso núcleo se chamar Ciência
+Comportamental, a responsabilidade principal de seus nove agentes
+era ensinar. Os cursos incluíam Psicologia criminal aplicada,
+Negociação envolvendo reféns, Problemas práticos da polícia,
+Gerenciamento de estresse da polícia e Crimes sexuais, que, mais
+tarde, foi modificado pelo meu grande colega Roy Hazelwood para
+Violência interpessoal.
+Embora o modelo “tripé” de ensino, pesquisa e consulta estivesse
+começando a tomar forma na Academia, todos os casos de consulta
+que mestres como Teten apresentavam eram estritamente informais
+e não faziam parte de nenhum programa organizado. O foco dessas
+40 horas em sala de aula era no assunto de maior interesse dos
+investigadores criminais — Motivação: Por que os criminosos fazem o
+que fazem, das maneiras que fazem, e como a compreensão disso pode
+ajudar a capturá-los? O problema dessa abordagem era que a maioria
+do conteúdo ainda vinha da esfera acadêmica, o que se tornava
+evidente quando policiais sênior que frequentavam o programa
+apresentavam ter mais experiência nos casos do que os instrutores. Ninguém era mais vulnerável nessa área do que o instrutor mais
+jovem da equipe: eu. Lá estava eu, de pé na frente de uma sala cheia
+de detetives e policiais experientes, a maioria bem mais velho. Meu
+papel era ensinar o que se passava na mente de um criminoso, algo
+que pudessem de fato usar para solucionar casos. Muito da minha
+experiência nas ruas viera do trabalho com policiais e detetives de
+homicídios em Detroit e Milwaukee, portanto, parecia prepotente de
+minha parte falar para aqueles homens sobre o trabalho deles.
+Havia uma percepção crescente, em muitos de nós, de que o que
+era aplicável à comunidade de saúde mental e psiquiátrica tinha
+pouca relevância na aplicação da lei.
+Mesmo assim, comecei a receber os mesmos tipos de pergunta que
+Teten recebia. Nas aulas, durante os intervalos e até mesmo à noite,
+policiais e detetives vinham até nós para pedir ajuda ou conselhos
+sobre seus casos ativos. Se eu apresentasse um exemplo que tivesse
+qualquer semelhança àquele em que estivessem trabalhando, eles
+supunham que eu poderia ajudá-los a solucioná-lo. Eles me viam
+como uma voz de autoridade. Mas será que eu era mesmo? Tinha que
+haver uma maneira mais prática de unir dados úteis e estudos de caso
+que me dessem mais confiança para sentir que eu realmente sabia o
+que estava falando.
+Como era o segundo mais novo, Robert Ressler se engajou em me
+ajudar a modificar a cultura da Academia e também para eu me sentir
+mais confortável dando aula. Cerca de oito anos mais velho do que eu,
+Bob desenvolvia o que Teten e Mullany haviam feito, com o objetivo
+de aproximar a disciplina de análise comportamental a algo que
+pudesse ser usado pelos departamentos de polícia e investigadores
+criminais. A forma mais eficiente de dar um pouco de experiência a
+um novo instrutor era por meio do que chamávamos de aulas
+itinerantes. Instrutores de Quantico passavam uma semana
+ensinando algo como uma versão dos principais casos das disciplinas
+da Academia para um departamento de polícia ou para policiais que
+haviam solicitado o treinamento. Depois, os professores seguiam para outra cidade por mais uma semana antes de voltarem para casa
+com as memórias de quartos de hotéis baratos e uma mala cheia de
+roupa suja. Então, Bob e eu colocamos o pé na estrada.
+Certa manhã de 1978, Bob e eu estávamos saindo de Sacramento,
+na Califórnia, local de nossa última aula itinerante. Comentei que a
+maioria dos criminosos sobre os quais ensinávamos ainda estava viva
+e poderíamos facilmente descobrir em que prisão eles se
+encontravam, uma vez que não tinham para onde fugir. Por que não
+tentar conversar com alguns deles, descobrir como era um crime
+através dos olhos deles, fazer com que relembrassem as cenas e nos
+contassem por que haviam feito aquilo e o que se passava em suas
+mentes no momento do crime? Pensei que valia a tentativa, e que
+alguns deles estariam tão entediados com a rotina da prisão que
+gostariam de ter a chance de falar um pouco de si.
+Havia pouquíssima pesquisa disponível sobre entrevistas com
+prisioneiros, e o que existia dizia respeito especificamente a
+condenações, liberdade condicional e reabilitação. Contudo, os
+registros pareciam indicar que os prisioneiros violentos e narcisistas,
+de modo geral, eram incorrigíveis — o que significava que não eram
+capazes de ser controlados ou reabilitados. Ao conversar com eles,
+esperávamos descobrir se isso era mesmo verdade.
+No início, Bob estava cético, mas disposto a seguir adiante com
+essa ideia louca. Ele havia servido no exército, e entre este e o FBI,
+vivenciara tanta burocracia que seu mantra era: “É melhor pedir
+desculpa do que permissão.” Apareceríamos nos presídios sem
+avisar. Naquele tempo, uma credencial do FBI nos permitia entrar
+nas prisões sem autorização prévia. Se comunicássemos com
+antecedência que estávamos a caminho, havia o risco de esse assunto
+correr entre o presídio. E se soubessem que um detento planejava
+falar com dois agentes federais, os outros presos poderiam pensar
+que ele era um dedo-duro.
+Ao embarcarmos nesse projeto, tínhamos algumas ideias
+preconcebidas do que encontraríamos durante as entrevistas. Dentre elas:
+Todos os presos se declarariam inocentes.
+Eles colocariam a culpa de suas condenações em uma defesa ruim.
+Não falariam com agentes federais por vontade própria.
+Criminosos sexuais se mostrariam pessoas viciadas em sexo.
+Se houvesse pena de morte no estado em que o assassinato tivesse
+ocorrido, eles alegariam não ter matado as vítimas.
+Eles projetariam a culpa nas vítimas.
+Todos vinham de uma família com histórico disfuncional.
+Sabiam a diferença entre o certo e o errado e a natureza das
+consequências de seus atos.
+Não tinham doenças mentais nem eram insanos.
+Serial killers e estupradores tenderiam a ser muito inteligentes.
+Todos os pedófilos são molestadores de crianças.
+Todos os molestadores de crianças são pedófilos.
+As pessoas se transformam em serial killers, não nascem assim.
+Conforme veremos nas páginas desse livro, algumas dessas
+suposições se provaram corretas, enquanto outras estavam bastante
+equivocadas.
+Para nossa surpresa, a grande maioria dos prisioneiros que
+procuramos concordou em conversar conosco. Por diversas razões.
+Alguns achavam que cooperar com o FBI seria bom para a ficha deles,
+e nós não fazíamos nada para dissuadir essa ideia. Outros, talvez
+tenham ficado intimidados. Diversos detentos, sobretudo os mais
+violentos, não recebem muitas visitas, portanto era uma maneira de
+aliviar o tédio que sentiam, falar com alguém do mundo exterior e
+passar algumas horas fora de suas celas. Havia alguns que estavam
+tão convencidos da própria capacidade de enganar a todos que viam a
+entrevista como um jogo em potencial.
+No fim, o que começou como uma simples ideia pelas ruas de
+Sacramento — conversas com assassinos — virou um projeto que mudaria a carreira e a vida tanto de Bob quanto a minha, além dos
+agentes especiais que viriam a se juntar à equipe e acrescentar uma
+nova dimensão ao arsenal da luta do FBI contra o crime. Antes de
+completar nossa fase inicial de entrevistas, tínhamos analisado e
+conversado com o fetichista de sapatos e estrangulador Jerome
+Brudos, em Oregon, que gostava de colocar sapatos de salto alto em
+suas vítimas mortas, tirados de seu enorme armário de roupas
+femininas; Monte Rissell, que estuprou e assassinou cinco mulheres
+durante a adolescência em Alexandria, na Virgínia; David Berkowitz,
+o Assassino do Calibre .44 e Son of Sam, que aterrorizou a cidade de
+Nova York em 1976 e 1977; e outros.
+Ao longo dos anos, meus analistas de perfil em Quantico e eu
+entrevistamos vários outros predadores violentos e serial killers,
+incluindo Ted Bundy, o prolífico assassino de jovens mulheres, e Gary
+Heidnik, que aprisionava, torturava e matava mulheres no porão de
+sua casa na Filadélfia. Esses dois facínoras forneceram traços
+característicos para o escritor Thomas Harris em O silêncio dos
+inocentes, assim como Ed Gein, o sujeito recluso de Wisconsin que
+entrevistei no Mendota Mental Health Institute, em Madison, que
+matava mulheres para usar a pele delas. Ele também serviu de
+modelo para Norman Bates, personagem do famoso livro de Robert
+Bloch, Psicose, base para o clássico filme homônimo de Alfred
+Hitchcock. Infelizmente, a idade e a doença mental de Gein
+resultaram em um padrão de pensamentos tão desordenados e
+confusos que a entrevista não foi produtiva. No entanto, ele ainda
+gostava de trabalhar com couro, produzindo carteiras e cintos.
+Por fim, o que surgiu foi uma série de rigorosos métodos de
+entrevista que nos permitiu começar a correlacionar o crime ao que
+se passava de fato na mente do criminoso no fatídico momento. Pela
+primeira vez, tínhamos uma maneira de conectar e compreender o
+que se passava na cabeça de um criminoso com evidências deixadas
+na cena do crime e com o que dizia à vítima, caso esta tivesse
+sobrevivido, ou o que havia sido feito no corpo antes e após a morte. Como costumamos dizer, isso nos ajudou a começar a responder à
+antiga pergunta: “Que tipo de pessoa faria algo assim?”
+Quando terminamos nossa primeira rodada de entrevistas, já
+sabíamos que tipo de pessoa faria algo assim, e três palavras
+pareciam caracterizar as motivações de cada um dos criminosos:
+manipulação, dominação e controle.
+As conversas foram o ponto de partida para tudo que veio depois.
+Todo o conhecimento que reunimos, as conclusões a que chegamos, o
+livro Sexual Homicide que resultou de nossa pesquisa e o Manual de
+classificação criminal que criamos, os assassinos que ajudamos a
+capturar e processar — tudo isso teve início ao sentarmos de frente
+para assassinos e perguntarmos a eles sobre suas vidas, com o intuito
+de entender o que os levou a matar uma pessoa ou, em alguns casos,
+várias pessoas. Tudo foi possível porque prestamos atenção a esse
+grupo de instrutores nunca antes explorado: os próprios criminosos.
+Vamos observar com atenção quatro assassinos que confrontei
+após sair do FBI, usando as mesmas técnicas que desenvolvemos
+durante nosso extenso estudo. São todos diferentes entre si, cada um
+com as próprias técnicas, motivações e composições psíquicas.
+Variam de uma única vítima até cerca de uma centena, e aprendi com
+todos. Os contrastes entre eles são intrigantes e envolventes — assim
+como as similaridades. Todos são predadores e cresceram sem criar
+laços de confiança com outros seres humanos durante os anos de
+formação. E todos são casos importantes em um dos debates centrais
+da ciência comportamental: natureza versus criação, se assassinos
+nascem da forma que são ou se acabam se tornando homicidas
+durante a vida.
+No FBI, operávamos com base na equação Por quê? + Como? =
+Quem. Quando entrevistamos criminosos condenados, podemos
+reverter a engenharia desse processo. Sabemos Quem e O quê. Ao
+combinar os dois, descobrimos os tão importantes Como? e Por quê?. 1
+A GAROTA PERDIDA
+Foi logo depois do feriado de Quatro de Julho de 1998 que peguei o
+trem para o norte a fim de entrevistar um possível novo “instrutor”.
+Seu nome era Joseph McGowan e ele havia sido professor de química
+e feito um mestrado. Porém, em vez de um título acadêmico formal,
+ele agora era oficialmente conhecido como o detento no 55722 em sua
+residência de longa data, a Prisão Estadual de Nova Jersey, em
+Trenton.
+Motivo da prisão: estupro, estrangulamento e assassinato violento
+de uma garota de 7 anos que havia ido até a casa dele para entregar
+duas caixas de biscoito das escoteiras, 25 anos antes.
+Enquanto o trem seguia rumo ao norte, eu me preparava. Essa é
+uma etapa sempre importante quando se vai conversar com um
+assassino, e, nessa ocasião em especial, mais do que nunca — afinal
+de contas, a conversa teria consequências muito além de
+informativas ou acadêmicas. Eu havia sido chamado pelo Conselho de
+Liberdade Condicional de Nova Jersey para ajudar a determinar se
+McGowan, que já tivera a liberdade condicional negada duas vezes,
+deveria voltar ao convívio em sociedade.
+Naquele tempo, o presidente do Conselho de Liberdade
+Condicional do estado de Nova Jersey era um advogado chamado
+Andrew Consovoy. Ele entrou no conselho em 1989, e enquanto o caso
+de McGowan surgia pela terceira vez, tinha sido eleito presidente há
+pouco tempo. Consovoy lera nosso livro Mindhunter após me ouvir no rádio certa noite e havia recomendado a leitura para o diretor
+executivo do conselho, Robert Egles.
+“Uma das coisas que percebi após ler este e outros livros seus é que
+você tinha toda a informação do que estava acontecendo”, relatou
+Consovoy anos depois. “Você precisava descobrir quem eram aquelas
+pessoas. Elas não começaram a existir no dia em que foram presas.”
+Com base nessa perspectiva, ele formulou uma unidade de
+investigações especial que operava sob o aval do conselho. Consistia
+em dois policiais aposentados e um pesquisador. A função era
+analisar a fundo os casos questionáveis de liberdade condicional e
+fornecer aos membros do conselho o máximo de informação possível
+sobre o solicitante, para que pudessem tomar uma decisão. Eles me
+chamaram para uma consulta sobre o caso de McGowan.
+Consovoy e Egles me buscaram na estação de trem e me levaram
+para um hotel em Lambertville, uma cidade pitoresca às margens do
+rio Delaware. Lá, Egles me entregou cópias de tudo que constava no
+arquivo do caso.
+Nós três fomos jantar naquela noite e falamos de forma geral sobre
+o trabalho que eu fazia, mas não comentamos sobre as
+especificidades do caso. Tudo que tinham me contado era que o
+sujeito matara uma menina de 7 anos e que queriam saber se ele
+ainda era considerado perigoso.
+Após o jantar, eles me deixaram no hotel, onde abri o arquivo do
+caso e dei início a muitas horas de revisão. Meu papel era ver o que eu
+conseguia identificar sobre o estado mental de McGowan — tanto o
+daquela época quanto o atual. Ele sabia a natureza e as consequências
+de seu crime? Conseguia discernir o certo do errado? Importava-se
+com o que havia feito? Sentia algum remorso?
+Qual seria sua conduta durante a entrevista? Ele relembraria
+detalhes específicos do crime? Se fosse solto, onde pretendia morar e
+o que pretendia fazer? Como ganharia dinheiro para se sustentar?
+Minha regra crucial nas entrevistas na prisão é nunca ir
+despreparado. Também desenvolvi a prática de não entrar com anotações, pois isso poderia criar uma distância artificial ou uma
+espécie de barreira entre nós quando chegasse o momento de
+explorar e ir em busca da camada mais profunda de sua psique.
+Eu não sabia o resultado dessa entrevista, mas imaginei que seria
+esclarecedora. Pois, como disse no início, toda vez que conversava
+com algum dos “especialistas”, aprendia algo valioso. E uma das
+coisas que precisavam ser descobertas era justamente que tipo de
+especialista Joseph McGowan viria a ser.
+Olhei os arquivos do caso, examinando mais uma vez as evidências
+e organizando meus pensamentos para a entrevista do dia seguinte.
+Ao fazer isso, uma história sinistra foi revelada.
+POR VOLTA DAS 14H45 DO DIA 19 DE ABRIL DE 1973 — QUINTA-FEIRA SANTA, COMO A
+MÃE, Rosemarie, sempre se lembraria —, Joan Angela D’Alessandro
+percebeu um carro estacionando na entrada da primeira casa à
+direita na St. Nicholas Avenue, esquina com a Florence Street, onde
+ela morava. Joan e a irmã mais velha, Marie, tinham conseguido
+vender biscoitos das escoteiras para todo mundo em uma área de
+quatro quadras em Hillsdale, o tranquilo bairro de Nova Jersey.
+Naquele tempo, ver crianças daquela idade saindo para vender
+biscoitos era normal. Como frequentavam uma escola católica, as
+garotas D’Alessandro estavam de folga em função do feriado religioso,
+e passaram parte do dia fazendo entregas. As pessoas que viviam na
+casa da esquina eram os últimos clientes; depois deles, os pedidos
+estariam finalizados. Como de costume, Joan queria terminar logo o
+trabalho.
+A jovem tinha 7 anos e 1,30 metro de pura energia e charme — uma
+escoteira linda, confiante e entusiasmada. Na verdade, ela era
+animada com tudo: escola, balé, desenhos, cachorros, bonecas,
+amigos e flores. Sua professora do segundo ano a classificara como
+uma “borboleta social”, alguém que atraía naturalmente as pessoas.
+Sua música favorita era “Ode à alegria”, da Nona de Beethoven. Ela era a caçula de três irmãos com poucos anos de diferença entre si.
+Frank, mais conhecido como Frankie, tinha 9 anos, e Marie, oito. Eles
+eram mais sérios, Rosemarie lembra. A mais nova era mais
+descontraída.
+“Joan era empática desde o início. Estava sempre preocupada com
+os sentimentos e as dores dos outros. E era corajosa por natureza.”
+Quase não existem fotografias em que a menina não estivesse
+sorrindo: Joan em seu uniforme de escoteira com a gravata e o gorro
+laranja, as mãos unidas na frente do corpo e o cabelo comprido
+castanho-avermelhado simetricamente caído sobre os ombros; Joan
+em seu collant preto e meia-calça branca, cabelo preso em rabo de
+cavalo, braços esticados para um lado, demonstrando um passo de
+balé; Joan em seu macacão xadrez azul-marinho, blusa branca e
+gravata-borboleta vermelha, como se tivesse acabado de virar para a
+câmera, a franja passando pela testa e o cabelo caindo em cascata
+pelo rosto adorável; Joan sentada sobre os pés em um vestido de festa
+azul-claro, o cabelo puxado para cima, ajeitando meticulosamente o
+buquê nas mãos de sua boneca Barbie Miss América. Todas as fotos
+representam diferentes personalidades da garota. As semelhanças
+entre elas são o sorriso angelical e a mágica inocente em seus olhos
+azuis.
+Um amigo de Frankie falou: “Ela era tão pé no chão. Eu teria me
+casado com ela!”
+Seu avô italiano a adorava e costumava dizer: “È così libera!” Ou
+seja: “Ela é tão livre!” Joan tinha uma risada sincera, e Rosemarie a
+vislumbrava atuando em peças de teatro quando fosse mais velha. Ela
+ia começar a fazer aulas de piano após completar 8 anos.
+Naquela tarde, estava no jardim de casa, brincando sozinha.
+Frankie tinha ido na casa de um amigo na vizinhança e Marie estava
+em um jogo de softball.
+De repente, correu para dentro de casa e falou para Rosemarie: “Vi
+o carro novo. Vou levar os biscoitos lá.” Ela pegou a bolsa das escoteiras na entrada de casa, com duas
+caixas de biscoito dentro.
+“Tchau, mãe, já volto”, disse ela, enquanto saltitava em direção à
+rua. A porta não tinha nem fechado direito desde que ela havia
+entrado correndo. Rosemarie se lembra do seu rabo de cavalo
+subindo e descendo, preso em um elástico com duas bolinhas de
+plástico azuis nas pontas, enquanto Joan descia os degraus da
+varanda a caminho da entrada da garagem mais adiante na rua. Tudo
+desapareceu como uma névoa.
+Cerca de dez minutos depois, a vizinha de porta ouviu o latido
+insistente do seu cachorro, Boozer, conforme contou a Rosemarie.
+Joan e o animal adoravam passear juntos.
+Joan não voltou logo para casa, mas Rosemarie não se preocupou.
+Provavelmente, ela havia ido na casa da amiga Tamara, na esquina da
+St. Nicholas Avenue com a Vincent Street. Elas moravam nesse tipo
+de vizinhança, em que se podia entrar e sair das casas das pessoas que
+você conhecia. A borboleta social sempre podia encontrar alguém
+para conversar ou algo para fazer. Por volta das 16h45, quando a
+professora de música chegou para a aula de piano de Marie,
+Rosemarie começou a se preocupar. Ela não queria transmitir a
+preocupação às crianças, então tentou se controlar. Afinal de contas,
+era um bairro seguro, com um agente do FBI e um ministro morando
+nas redondezas.
+Ela começou a fazer algumas ligações. Joan não estava em
+nenhuma das casas para as quais telefonou e ninguém a havia visto.
+Seu marido, Frank D’Alessandro, chegou em casa por volta das
+17h50, e Rosemarie contou a ele que a filha tinha desaparecido. Frank
+era analista de sistemas, um homem metódico e taciturno. Rosemarie
+pôde ver no mesmo instante o quão preocupado e tenso ele estava,
+mas, como sempre, o marido guardara o que sentia para si.
+Rosemarie falou: “Temos que chamar a polícia.”
+Frank concordou e ligou. Depois, saiu com os outros dois filhos de
+carro pelo bairro à procura de Joan. Eles percorreram toda a vizinhança.
+Quando voltaram sem tê-la visto nem encontrado alguém que o
+tivesse, Rosemarie decidiu sair sozinha. Frank não queria ir. Ela
+lembrou que, quando Joan saiu, dissera algo sobre entregar o último
+de seus pedidos porque tinha visto “o carro novo” na St. Nicholas
+Avenue. O carro era da casa dos McGowan. Joseph McGowan
+ensinava química na Tappan Zee High, logo após a divisa do estado,
+em Orangeburg, Nova York. A casa pertencia à mãe dele, Genevieve
+McGowan, e o homem morava lá com ela e a mãe de Genevieve, sua
+avó. As escolas públicas tinham funcionado naquele dia, então teria
+sido mais ou menos o horário que estaria chegando em casa.
+Relutante, para que não fosse sozinha, Rosemarie levou Frankie
+com ela, e juntos caminharam pela Florence Street, virando na St.
+Nicholas Avenue. Eram 18h50. A residência dos McGowan, uma
+construção de tijolos vermelhos e revestimento bege de dois andares,
+com uma rampa e uma garagem para dois carros, era a primeira casa
+à direita da rua e ocupava todo o lote da esquina.
+Os dois subiram os cinco degraus da frente e ela tocou a
+campainha. Ela mandou Frankie ficar no jardim.
+O sr. McGowan abriu a porta. Ele parecia ter acabado de sair do
+banho. Segurava um charuto fino, que, a princípio, Rosemarie não
+percebera. Era um rapaz solteiro de 27 anos. Ela não o conhecia, mas
+“meus filhos tinham dito que ele era muito legal”.
+Rosemarie entrou no hall da casa; ela queria ficar exatamente
+onde sabia que Joan estivera há pouco tempo. Já estava começando a
+ter uma sensação estranha. Ela se apresentou.
+“Você viu a minha filha Joan?”, perguntou. “Ela veio aqui entregar
+biscoitos.”
+“Não, não vi”, respondeu ele.
+Ele falou de um jeito casual, descontraído. E foi nesse momento
+que Rosemarie D’Alessandro sentiu tudo ficar gelado.
+“Após alguns minutos em pé no hall, percebi um carro de
+bombeiro enorme parado na frente da casa dele”, contou ela. “Nós Kindle Unlimited
+TESTE GRÁTIS POR 30 DIAS!
+Você chegou ao fim deste trecho
+Continue a história exatamente de onde parou com o Kindle Unlimited
+e explore mais de 1 milhão de eBooks. Experimente grátis por 30 dias.
+Com o Kindle Unlimited, sua leitura não tem fim:
+Leia à vontade — explore mais de 1 milhão de títulos sem pagar por livro.
+Leve para qualquer lugar — baixe o app gratuito e leia onde e quando quiser.
+Em qualquer tela — celular, tablet, computador ou Kindle — você escolhe.
+Grandes autores — best­sellers e novos talentos, inclusive títulos em inglês.
+COMEÇAR MEUS 30 DIAS GRÁTIS
+Kindle Unlimited Acesso imediato Cancele quando quiser
+Não precisa ter um dispositivo Kindle: baixe o app gratuito e comece a ler agora.
+Se não quiser ler no aplicativo Kindle, compre o livro clicando aqui.
+Pagamento seguro  ꞏ  Amazon  ꞏ  Kindle Unlimited https://maps.app.goo.gl/udcVudUmJefGpN1a6?g_st=achttps://maps.app.goo.gl/udcVudUmJefGpN1a6https://maps.app.goo.gl/65udeCoZyg7jpJ5i7?g_st=achttps://maps.app.goo.gl/65udeCoZyg7jpJ5i7https://maps.app.goo.gl/B6n6K42waxhg3XnM8?g_st=achttps://maps.app.goo.gl/B6n6K42waxhg3XnM8https://maps.app.goo.gl/KsUKQcSqHxH7fQtu8?g_st=achttps://maps.app.goo.gl/KsUKQcSqHxH7fQtu8https://maps.app.goo.gl/vpqTMhWvYsHXkNyF7?g_st=achttps://maps.app.goo.gl/vpqTMhWvYsHXkNyF7https://maps.app.goo.gl/76YcQ8HdBiCKp3jR8?g_st=achttps://maps.app.goo.gl/76YcQ8HdBiCKp3jR8https://maps.app.goo.gl/jJUtgNr6dRrLV85L9?g_st=achttps://maps.app.goo.gl/jJUtgNr6dRrLV85L9https://maps.app.goo.gl/jVLcKfLuoYNXm4Wm8?g_st=achttps://maps.app.goo.gl/jVLcKfLuoYNXm4Wm8https://maps.app.goo.gl/QpB9cbP1tBKdtAzS7?g_st=achttps://maps.app.goo.gl/QpB9cbP1tBKdtAzS7https://maps.app.goo.gl/63jFf1DWyU3Jd9vo8?g_st=achttps://maps.app.goo.gl/63jFf1DWyU3Jd9vo8https://maps.app.goo.gl/gxCySGsMEFPsopNc9?g_st=achttps://maps.app.goo.gl/gxCySGsMEFPsopNc9https://maps.app.goo.gl/S3A9EknCPNdb9GJU6?g_st=achttps://maps.app.goo.gl/S3A9EknCPNdb9GJU6https://maps.app.goo.gl/g9eqCqkzVg98aH458?g_st=achttps://maps.app.goo.gl/g9eqCqkzVg98aH458https://maps.app.goo.gl/iac8MRRiHzyyDFQ56?g_st=achttps://maps.app.goo.gl/iac8MRRiHzyyDFQ56https://maps.app.goo.gl/Ub7XxKZ23jHGEbef9https://maps.app.goo.gl/u8figiFxML7UAzVW7?g_st=achttps://maps.app.goo.gl/u8figiFxML7UAzVW7https://maps.app.goo.gl/p3HY5N1yA6avEUV68?g_st=achttps://maps.app.goo.gl/p3HY5N1yA6avEUV68https://maps.app.goo.gl/c7ukG8qPZSKEtQzLA?g_st=achttps://maps.app.goo.gl/c7ukG8qPZSKEtQzLAhttps://maps.app.goo.gl/c1zV5g2D4G6YkaLe8?g_st=achttps://maps.app.goo.gl/c1zV5g2D4G6YkaLe8https://maps.app.goo.gl/kb2p3q7qSsLiAL837?g_st=achttps://maps.app.goo.gl/kb2p3q7qSsLiAL837https://maps.app.goo.gl/MVHcxgYXtKzhMjGs9?g_st=achttps://maps.app.goo.gl/MVHcxgYXtKzhMjGs9?g_st=ac Como julgar um serial killer: formação de alianças e tradução de modos de existências
+no julgamento do Maníaco do Parque1
+Pedro Borda (IEB/USP-SP)
+Introdução
+Passados mais de 25 anos desde que os corpos de dezenas de mulheres foram
+encontrados no Parque do Estado, em São Paulo, o Maníaco do Parque ainda é um dos mais
+conhecidos assassinos em série brasileiro. Recentemente, o fôlego dessas histórias foi
+renovado com o anúncio do lançamento de um filme sobre os crimes cometidos por Francisco
+de Assis Pereira, previsto para estrear ainda esse ano2
+. Este trabalho toma como ponto de
+partida os julgamentos do Maníaco para investigar a hipótese de que os julgamentos de serial
+killers apresentam questões em torno das “motivações”, a partir de uma poderosa e emergente
+estética forense associada a uma imagem contemporânea da “mente” do criminoso que é
+particularmente distinta das discussões emplacadas no começo do século XX. Assim, o
+objetivo deste trabalho é recuperar os argumentos apresentados nos julgamentos do Maníaco
+do Parque para investigar as conexões entre os diferentes actantes envolvidos na condenação
+de Francisco e o tipo de aliança que se estabeleceu ali naquela tradução de modos de
+existência. A tradução, por sua vez, sempre comporta uma mudança de termos, e nessa
+montagem provisória de formas produtivas e heterogêneas, a tarefa é encontrar justamente
+uma linguagem “interessante” (CALLON, 2020) para o direito e para a ciência, capaz de
+operar uma negociação entre distintos modos de existência (LATOUR, 2017, 2019) para
+determinar, enfim, como julgar um serial killer3
+.
+Para desenvolver esse argumento, precisamos dizer algumas palavras acerca da
+invenção do “assassino em série”. Depois, é preciso associá-la à transformação que a “virada
+forense” imprime na relação entre cientistas e juristas, a partir da predileção crescente pela
+“materialidade” oferecida pelas novas tecnologias forenses. Porém, conforme veremos em
+seguida, a ideia de “virada forense” talvez não seja suficiente para explicar as mediações sutis
+que são impostas durante a circulação dessas evidências aparentemente mais neutras e
+objetivas. Nesse sentido, ao final da introdução o leitor encontrará também a definição de
+3 Para uma discussão mais detida sobre esses pressupostos da Teoria ator-rede e as suas implicações quanto à
+produção de materialidades, conferir o trabalho de John Law, intitulado “Teoria ator-rede e semiótica material”,
+recentemente traduzido para compor o Dossiê Bruno Latour (2020), publicado pela Editora UFMG.
+2 Para saber mais sobre o filme, conferir:
+<https://www.omelete.com.br/filmes/maniaco-do-parque-xama#:~:text=A%20produ%C3%A7%C3%A3o%20d
+o%20filme%20de,mas%20ter%C3%A1%20estreia%20em%202024>. Acesso em 05/06/24.
+1 Trabalho apresentado na 34° Reunião Brasileira de Antropologia, em 2024. Palavras-chave: antropologia da
+ciência; criminologia; antropologia jurídica.
+1 alguns conceitos centrais que oferecem caminhos para pensar as relações entre esses modos
+de existência sob a ideia de formações de alianças provisórias entre actantes, interpelados por
+um ponto de passagem obrigatório, que é o questionamento em torno da “motivação” para os
+assassinatos seriais.
+Sendo assim, é importante observar que a introdução da ideia de “assassino em série”
+no jargão jurídico, técnico e científico reformula o problema dos homicídios repetitivos em
+torno de uma categoria capaz de aglutinar componentes outrora difusos e ofuscados pelas
+discussões dos fatores criminógenos. Em síntese, o serial killer reproduz uma nova relação
+com esses criminosos, que não podem mais ser internados e tratados com base na sua suposta
+patologia. A análise das motivações para esses assassinatos revelaria, ao invés disso, um
+considerável grau de premeditação e satisfação sexual que demanda justamente a condenação
+em presídios, e não a internação em manicômios judiciários. Nesse sentido, os julgamentos
+do Maníaco do Parque representam um momento essencial para a apresentação dessas
+discussões.
+A relação que se desenvolve a partir da invenção do serial killer diz respeito à
+operacionalização da ideia de “motivação” associada a um processo histórico de
+aprofundamento da “materialidade” na resolução de crimes. Isso significa que o assassino em
+série é trazido à existência por meio de uma combinação de técnicas de perfilamento criminal
+e a generalização de uma certa estética forense centrada na materialidade das evidências
+coletadas. Esses elementos produzem uma mudança de escalas importante para apreender
+esse fenômeno: da cena do crime ao perfil do assassino, ou à sua “mente”. Tal relação não era
+concebível, por exemplo, diante do quadro biodeterminista da criminologia brasileira do
+início do século XX4
+. Naquele momento, o balizador dessas discussões não envolvia o tipo de
+especificidade exigida pela atenção aos detalhes da cena do crime, que respondem a uma
+necessidade de deciframento do modus operandi e da assinatura do assassino, elementos
+cabais para a elaboração de um perfil criminal. Portanto, a invenção do serial killer deve ser
+situada no quadro mais geral de uma “virada forense” (WEIZMAN, 2017),
+4 O Código Penal de 1940 está inserido em uma tradição autoritária, cujas tendências remontam à Primeira
+República e se fortalecem sob a égide do Estado brasileiro autoritário do período. Esse novo Código é uma
+tentativa de acomodar uma série de conflitos entre setores das elites republicanas quanto ao Código de 1890.
+Assim, antes mesmo dessa reformulação, o decreto 24.459, de 3 de julho de 1934, já dispunha de medidas a
+respeito da assistência e proteção à pessoa e aos bens dos “psicopatas” (BRASIL, 1934). O decreto instituía, por
+exemplo, que a finalidade da assistência aos psicopatas e da profilaxia mental era proporcionar tratamento e
+proteção legal, oferecendo os subsídios necessários para a “realização da higiene psíquica em geral e da
+profilaxia das psicopatias em especial”. Esse decreto também instituía um Conselho de Proteção aos Psicopatas,
+cujos membros viriam das mais diferentes especialidades. A função desse conselho era auxiliar os órgãos de
+propaganda de higiene mental e também “Estudar os problemas sociais relacionados com a proteção aos
+psicopatas”, oferecendo aconselhamento ao Governo, quando necessário.
+2 concomitantemente ao desenvolvimento do perfilamento criminal pelo Federal Bureau of
+Investigation (FBI).
+A ideia de “virada forense”, desenvolvida por Eyal Weizman, dá conta de um cenário
+dos métodos forenses aplicados à resolução de casos de infração dos direitos humanos, como
+nos episódios de exumação das ossadas de ativistas argentinos mortos pela ditadura5
+. Apesar
+da “virada forense” descrever o espaço ocupado pelos métodos forenses dentro dos debates a
+respeito das violações de direitos humanos, configurando uma verdadeira prática de
+“counterforensics” - como Weizman a chama -, ela também sinaliza os esforços de
+construção de um processo criminal e uma investigação policial descoladas dos aspectos (em
+tese) mais humanos presentes no testemunho. Ao final do século XX, o que teríamos é a
+prevalência de uma estética forense cada vez mais poderosa. Por sua vez, essa nova
+sensibilidade à materialidade não se sustenta apenas no trabalho policial e militar, dirá
+Weizman, como também no próprio âmbito das produções televisivas sobre crimes, em geral.
+A sensibilidade da virada forense para a materialidade e os códigos digitais
+não é evidente no trabalho policial e militar sozinhos, mas permeia a cultura
+em geral, alta e baixa. Desde os movimentos filosóficos, tais como as
+ontologias objeto-orientadas, até as séries televisivas sobre crimes a atenção
+passou das complexidades fisiológicas na posição dos sujeitos rumo às
+narrativas guiadas por coisas, rastros, objetos e algoritmos (WEIZMAN,
+2017, p. 83, tradução livre).
+Essas novas tecnologias e metodologias científicas utilizadas para apreender o crime
+desempenharam um papel fundamental nas “políticas de visibilidade”, isto é, na produção das
+formas pelas quais enxergamos o crime, tornamos visível um certo problema; daí a predileção
+pelo tipo de materialidade que o DNA oferece. Durante esse processo, também o poder do
+testemunho sofre algumas transformações:
+Mais precisamente, a emergente sensibilidade forense buscaria se desfazer
+do testemunho humano (a fragilidade da memória da testemunha, as
+complexidades do sujeito e as ambiguidades da linguagem). Ao invés disso,
+ela se volta para a ciência material, cálculos de probabilidade e/ou até
+mesmo, em alguns casos, tecnologias de interpretação (semi) automatizadas,
+promovendo objetos, dados, práticas e tecnologias forenses mais neutros,
+objetivos e confiáveis (enquanto ignora o fato de que todos eles estão
+conectados a uma série de mediadores, todos os quais estão sujeitos a erro)
+(ISANOVIC, 2017, p. 35, tradução livre).
+5 A EAAF (Equipo argentino de antropología forense), criada em 1984, foi uma iniciativa importante nesse
+sentido, ao implantar a antropologia biológica para a resolução de crimes cometidos durante a ditadura
+argentina, o que permitiu a identificação de milhares de ossadas. Para um breve balanço da aplicação desses
+métodos forenses sob o escopo da “virada forense”, conferir o trabalho de Élisabeth Anstett, traduzido para o
+português por Simone Rodrigues Pinto como “Por que procurar os mortos? A antropologia das práticas
+funerárias em face da virada forense” (2022).
+3 Fala-se, portanto, em uma mudança de foco do testemunho para a “capacidade
+comunicativa das coisas”. Essa dimensão da cultura jurídica orientada aos objetos comporta
+uma forma triangular, constituída por objeto, interpretador e uma assembleia pública. A
+dinâmica que se constitui a partir da virada forense se desenhará em torno de um exercício de
+tornar visível, persuasivo e crível, por meio de uma série de mediadores técnico-científicos
+direcionados à produção da materialidade, um crime. Entretanto, por mais que se fale em uma
+ontologia materialista, calcada nessa capacidade comunicativa dos não-humanos, este
+“parlamento das coisas” - para usar o termo de Latour - envolve a manutenção de certos
+porta-vozes autorizados a falar em nome dessas entidades, o que não está plenamente
+contemplado nas discussões de Weizman sobre a virada forense. Nesse sentido, quando nos
+voltamos para os julgamentos nos quais essas evidências forenses são postas para falar, é
+preciso considerar a mediação posta em prática pelos cientistas convocados a falar por suas
+produções para uma platéia de jurados raramente versados na linguagem hermética do direito
+ou das ciências.
+Considerando a pluralidade de actantes engajados na tarefa de trazer à existência
+determinada prova, precisamos discutir mais detidamente os sentidos dessa “capacidade
+comunicativa das coisas”. O problema com a ideia de “virada forense” reside no fato de que
+ela parece reforçar uma perigosa assimetria entre evidências humanas de um lado e
+não-humanas de outro. Na verdade, o que precisamos fazer é justamente aprofundar as
+mediações que sustentam a materialidade forense aparentemente dissociada do incansável
+trabalho que subjaz à sua fabricação e da participação dos não-humanos. A partir daí, será
+possível pensar uma predominância da materialidade evidencial não mais vista sob uma
+oposição entre objeto/sujeito, mas como um novo produto que reconfigura esse dualismo.
+Outro problema que aparece nessa tentativa de expandir a virada forense para as
+discussões da criminologia contemporânea envolve as limitações com as quais as evidências
+materiais se deparam, o que coloca percalços na suposta transição de uma “era das
+testemunhas” para uma “era das evidências”. Novamente, a assimetria reaparece sob a ênfase
+excessiva em um dos lados desse par que, na verdade, se comporta de maneira muito mais
+fluida e interconectada. Por exemplo, subjaz aí o pressuposto de que as evidências se fazem
+por si próprias, o que não faz o menor sentido quando consideramos que elas devem ser
+coletadas e produzidas por humanos e uma série de instrumentos de coleta, preservação,
+ampliação, fragmentação e detecção em colaboração associativa. Diante da corte, portanto, o
+trabalho dos cientistas sofrerá uma série de traduções para que se encaixe aos modos jurídicos
+de produção de existência. Sem dúvidas, uma árdua negociação. O analista da cena do crime
+4 deve, portanto, ser capaz de perceber os objetivos de sua investigação para reconhecer e
+localizar as evidências físicas de modo mais otimizado, conforme fica claro nesse excerto de
+um trabalho de dois cientistas forenses:
+Por isso, um sistema deve ser desenvolvido, no qual a evidência física
+relevante é reconhecida e localizada, enquanto os materiais supérfluos são
+descartados. Isso só acontecerá se os investigadores na cena do crime
+entenderem os objetivos de uma busca na cena do crime, compreenderem os
+conceitos e técnicas para a busca efetiva e exercitarem cotidianamente a
+disciplina necessária para confiar em um processo de busca sistemático,
+estruturado e com uma mente completamente objetiva e aberta (LEE e
+PAGLIARO, 2013, p. 2, tradução livre).
+É possível mobilizar a “virada forense” para explicar esse processo histórico mais
+geral de uma guinada em direção a uma cultura forense “objeto-orientada”. Todavia, a
+antropologia deve ser capaz de se desvencilhar da reafirmação dessas assimetrias e incorporar
+na sua reflexão a inter-relação entre humanos e não-humanos na produção dessa
+materialidade, ainda que o papel daqueles seja tido como mínimo, quase ausente. Seguindo
+essa lógica, o assassino em série é produto de uma série de actantes com diferentes objetivos,
+ainda que interpelados por uma mesma questão em torno da motivação. Portanto, a ação é
+sempre o resultado de entidades associadas por meio de uma mediação técnica, sendo que o
+adjetivo “técnico” caracteriza um movimento muito particular de delegação que posiciona
+pontos de passagem obrigatórios, marcando a trajetória que constitui um actante específico:
+“If one ever comes face to face with a technical object, this is never the beginning but the
+end of a long process of proliferating mediators, a process in which all relevant subprograms,
+nested one into another, meet in a ‘simple’ task” (LATOUR, 1999, p. 198). Para falarmos
+com Latour, além dos pontos de passagem obrigatórios impostos pela delegação científica,
+também o direito impõe suas demandas à construção desse objeto. Se o assassino em série
+“funciona” juridicamente, ele também “funciona” cientificamente - e vice-versa. A questão é
+abrir essa caixa-preta. Isso será feito neste trabalho por meio de uma análise dos julgamentos
+do Maníaco do Parque, tomando o “julgamento” como esse acontecimento interpelado por
+diferentes actantes e possibilidades de conexões, mediações e traduções. Ao final desse
+processo - se é que existe um final em definitivo -, o que resta? Uma estabilização provisória
+do assassino em série.
+5 Os crimes do Maníaco
+Tamanho foi o alcance dos crimes do Maníaco, que o episódio piloto do famoso
+programa Linha Direta, produzido pela Rede Globo - e lançado no dia 22 de novembro de
+1998, durante o Fantástico - apresentou a primeira entrevista realizada com o Maníaco do
+Parque. Um jovem Marcelo Rezende apresentava o programa na ocasião e foi quem teve a
+oportunidade de entrevistar o assassino em série. A trilha sonora sombria, marcada pelo som
+de sintetizadores, dá o tom sobrenatural do programa, que ainda contou com as análises de
+duas “sensitivas”, convidadas a se conectar espiritualmente com o Parque do Estado, onde o
+Maníaco matava suas vítimas. Além delas, um astrólogo também participa do episódio: “O
+astrólogo Humberto Gentil chegou às mesmas conclusões traçando um mapa astral do
+Maníaco. Tudo o que o astrólogo e as sensitivas disseram foi, dias depois, confirmado pelo
+parecer do psiquiatra Guido Palomba, confirmado pelas declarações dos pais do assassino. E,
+mais tarde, pelo próprio Francisco de Assis Pereira”. O apresentador dá o tom da incursão:
+“Chegamos onde ninguém havia estado antes: na mente assassina do maníaco (...). Quando a
+ciência oficial não consegue traçar um perfil psicológico exato, a busca de respostas nos leva
+a novos desafios”. O sensacionalismo do episódio não escapou impune a um crítico de
+televisão do Jornal A Tribuna, que escreveu o seguinte em sua coluna, à época:
+O sinistro - para não dizer cadavérico - Marcelo Rezende tem feito hora extra
+nos estúdios e bastidores da Globo. Tudo por conta, é claro, do Linha Direta
+(...). A hora extra do Rezende está proporcionalmente ligada aos resultados
+do projeto (dele mesmo, por sinal). Desde aquela novelinha armada com o
+Maníaco do Parque para o Fantástico, o coleguinha jornalista não pensava
+em outra coisa. Queria porque queria um programa só dele, com tom
+policialesco e uma narração de porta de cemitério.
+Portanto, desde antes da sua condenação em definitivo, o Maníaco do Parque já
+ensejava diversos debates. Aparentemente, o programa tentou surfar na onda dessas
+discussões, produzindo ele mesmo, à sua maneira, uma tese sobre as motivações de Francisco
+em uma mistura de espiritualidade, sexualidade, psiquiatria, astrologia e maternidade. Ali,
+diversos interlocutores são sobrepostos pela edição de vídeo, convocados a dar suas
+interpretações sobre o Maníaco em rede nacional. O primeiro núcleo da nossa trama,
+conforme apresentado no Linha Direta, é a própria família de Francisco. Seu relato sobre
+episódios de abuso na infância, por parte da própria tia, são contrastados com a fala da
+mulher, que aparece com o rosto escondido, negando as declarações do assassino, colocando
+dúvida sobre o depoimento dele. Em seguida, temos um paralelo imagético entre as
+experiências de Francisco no matadouro de vacas de sua família e o seu ritual homicida, anos
+6 depois. Quem nos conta essa história é o próprio Maníaco, que descreve a tristeza que sentia,
+quando criança, ao ver os animais serem mortos com uma marretada na cabeça.
+Seu depoimento é interrompido para exibir o relato de um familiar reforçando a
+história, ao narrar com detalhes a posição que os bovinos caíam após os golpes, similar à
+própria configuração em que se encontravam os corpos das vítimas, de modo que o programa
+parece sugerir uma conexão entre o que o menino via e o que o Maníaco fazia. As sensitivas
+também comentam esse evento, declarando que as posições dos corpos fazia incidir sobre as
+vítimas uma maior “energia telúrica” advinda da terra, o que as deixaria “entregues às
+entidades satânicas” que acompanham Francisco. Por sua vez, essa energia maligna pairando
+ao seu redor seria consequência do “cajado carmático” herdado do avô, durante o nascimento
+de Francisco. Para sustentar esse argumento, a sensitiva conta sobre a visão que teve do
+nascimento do menino. Depois, a própria mãe de Francisco corrobora a visão da sensitiva,
+descrevendo o seu pai - avô de Francisco - como uma pessoa agressiva e controladora. O
+depoimento da sensitiva é acompanhado por um coral sombrio que canta ao fundo da
+narração:
+“Ouvi nitidamente a risada dada por uma pessoa adulta, mas a imagem que
+me é dada não é dessa pessoa adulta. É o próprio Francisco quando era bebê
+recém-nascido na maternidade. Então, eu vejo essa enfermeira entrando,
+colocando esse bebê nas mãos da senhora mãe dele e dizendo: ‘Olha que
+lindo!’, e ele dá um largo sorriso. Essa risada não foi dada pelo Francisco. Ali
+ele recebeu o cajado, vamos dizer assim, carmático para resgatar essa
+incumbência espiritual”.
+Enquanto isso, no Júri, a questão seria em torno do grau de “normalidade” de
+Francisco, ainda que a ânsia por esse tipo de associação entre “motivação”, “mente” e
+sexualidade patológica não parasse de se precipitar. Uma vez que a defesa tinha diante de si
+um réu confesso, não seria possível defendê-lo por meio de uma negação dos crimes, e sim
+sob a rubrica da “semi-normalidade”. Para o promotor, Edilson Bonfim, o desafio era
+explorar as falhas e controvérsias envolvendo os laudos, o que exigia, nas palavras do
+promotor, uma “nova arquitetura”, capaz de dar conta de um problema tão excepcional e
+sombrio quanto esse. Ele deveria estar apto a questionar as avaliações de peritos que
+sugeriam uma outra punição, baseada no argumento da inimputabilidade. Tais debates
+evidenciam um balanço de forças diferente daquele que observamos nos julgamentos de
+Febrônio Índio do Brasil e Benedito, por exemplo6
+. Enquanto a legislação da época tornou
+6 Tanto Febrônio quanto Benedito foram dois assassinos em série brasileiros que ganharam muita notoriedade na
+época de seus crimes, no início do século XX. No ano de sua prisão, Febrônio já colecionava uma série de
+passagens criminais, incluindo fraude, chantagem, suborno e vadiagem. Dessa vez, no entanto, uma medida
+inédita no Brasil, encaminhada pelo Dr. Heitor Carrilho, absolveu os crimes de Febrônio mediante a sua
+7 possível a internação de Febrônio no primeiro Manicômio Judiciário brasileiro, sob as
+recomendações dos médicos da época, o caso do Maníaco do Parque seria atravessado por
+uma série de discussões baseadas nas “teorias do Primeiro Mundo” e na “legislação
+atrasada”, termos utilizados por Bonfim. Essas manipulações retóricas não são novidades
+para os operadores do direito envolvidos com o Tribunal do Júri, onde o que realmente
+importa é o fervor do jogo dramático que se joga nos tribunais. Ressalto que, apesar dessa
+aparente virada forense, não podemos esquecer a mediação presente na apresentação da
+materialidade produzida por cientistas para o público típico de um Júri, de modo que novos
+problemas surgem dessa transposição de produções científicas - materiais ou discursivas -
+para o ambiente da Justiça.
+No Brasil, os crimes contra a vida são julgados em uma sessão de Júri, na qual os
+jurados decidem - com base em sua “convicção íntima”7
+, após a exposição dos argumentos do
+promotor e do defensor - o futuro do réu. Nesses rituais, ocorre uma manipulação de imagens
+que (re)contam e imaginam os crimes em questão. Esse processo funciona precisamente
+como um “jogo”, nos termos de Schritzmeyer (2002), no qual as mortes são arrancadas da
+esfera “natural” e transformadas em “metáforas de dramas da vida”, encenadas e ritualizadas.
+As regras desse jogo são as regras da própria vida social. É com base nelas que o jogo do Júri
+transcorre, sobre as argumentações a respeito de quando e como se pode ou não matar: “Cada
+sessão de Júri, nesse sentido, é um teste desse ‘mundo das regras’, ao qual a cultura é
+submetida e através do qual submete os participantes - juízes, promotores, advogados, réus,
+testemunhas, funcionários e assistentes” (p. 10). Os cotidianos são, portanto, desconectados e
+reorganizados em conformidade com regras e valores distintos. Schritzmeyer indica duas
+orientações que compõem as performances dos “tribunos”: além do domínio técnico das
+“regras do jogo”, é preciso entender precisamente como mobilizá-las, ou seja, possuir um
+domínio estratégico.
+7 Embora o princípio da convicção íntima não seja oficialmente adotado como regra no direito brasileiro, o
+artigo 5°, inciso XXXVIII da Constituição Federal de 1988 assegura o sigilo das votações ao júri, o que tem o
+mesmo efeito prático.
+internação no Manicômio Judiciário do Rio de Janeiro, em 1929. Ele se tornaria, assim, o primeiro paciente
+psiquiátrico do Brasil. O caso de Febrônio é particularmente importante para a história da medicina e da
+criminologia brasileira, porque representa uma vitória da Escola Positiva, que conseguiu a internação inédita e
+por tempo indeterminado de um indivíduo considerado portador de transtornos mentais que o tornavam
+inimputável. Diante disso, uma série de materiais foram produzidos a respeito de Febrônio, popularizando o seu
+“personagem”. A certa altura, ele figuraria até mesmo em marchinhas de carnaval e lendas urbanas feitas para
+assustar crianças desobedientes. Já o caso de Benedito - que matou 7 mulheres na cidade de São Paulo, em 1951
+-, apesar de não encontrar a mesma ramificação, também representa um caso muito conhecido de um assassino
+em série.
+8 Para a autora, portanto, existe uma dimensão crucial da “encarnação da
+criminalidade” que torna de menor importância a constatação do ato criminal em si, em
+detrimento da articulação de uma “reflexão circunstanciada sobre a criminalidade e os valores
+que tornam certos atos socialmente legítimos ou ilegítimos” (p. 46). O que interessa, nessa
+análise proposta por Schritzmeyer, é o fervor do jogo dramático, pois é ele que confere
+coerência a um conjunto de sentimentos e de representações, que contextualiza a
+criminalidade a partir das histórias narradas no Júri. No espaço cênico do Júri, os valores do
+“senso comum” adquirem status “pseudo técnico-científico” que tentam afetar os jurados de
+determinada maneira. Assim,
+não temos nas grandes performances de oradores do Júri, apenas reprodução
+e representação de crimes perturbadores ou, ainda, fiéis relatos da ‘verdade
+dos fatos’. Tampouco temos uma simples imposição de valores ‘burgueses’,
+por parte de operadores técnicos e jurados, a réus de ‘classes trabalhadoras’.
+As performances dos oradores do Júri só são grandiosas e arrebatam os
+jurados, os assistentes e o próprio orador quando elas desencadeiam uma
+ab-reação, ou seja, quando, ao término da fala do orador, predomina a
+sensação de que ele elaborou e organizou com tamanha intensidade e
+pertinência os acontecimentos relatados, que possibilitou a todos
+transportarem-se para a situação originária da perturbação criminosa,
+restando então superá-la e retomar a normalidade da vida, sentenciando o
+réu (SCHRITZMEYER, 2001, p. 46-7).
+Nesse sentido, as evidências aparentemente “técnicas” e científicas produzidas
+durante a investigação policial passam por uma nova mediação nas sessões do Júri, ou
+melhor, são escanteadas em detrimento de um vocabulário sentimental, conforme
+Schritzmeyer apresenta em sua etnografia. Desse modo, “Por mais menções que os
+arguidores façam a provas técnico-científicas e por mais que utilizem um jargão jurídico, o
+cerne de suas argumentações baseia-se em sentimentos que, esses sim, serão julgados como
+motivações legítimas ou ilegítimas para condenar ou absolver réus” (p. 190). Mas, conforme
+a própria autora destaca, os Júris não são a única chave pela qual podemos compreender a
+elaboração dos significados das mortes violentas pelo Poder Judiciário, apesar do seu
+destaque enquanto uma “obra imaginativa”.
+Para o processamento de uma denúncia de crimes contra a vida pelo Ministério
+Público, é necessário que o inquérito policial apresente indícios de autoria e materialidade do
+crime. Em outras palavras, a instauração de um inquérito policial, após o boletim de
+ocorrência, tem como função a produção de evidências que comprovem não só a ocorrência
+do crime, como também a autoria. Constatados esses dois elementos, o delegado produz um
+9 relatório. Desse relatório, surge uma denúncia encaminhada pelo Ministério Público para um
+juiz competente, sugerindo o julgamento do réu pelos crimes expostos no documento. Caso o
+juiz acate a denúncia, o caso vai a julgamento pelo Tribunal do Júri.
+Como podemos apreender desse esquema, a produção de evidências é um momento
+fundamental até o recebimento da denúncia pelo juiz responsável, que julga a qualidade e a
+pertinência dos indícios apresentados. É plenamente possível que ele opte pelo não
+recebimento da denúncia, situação que estenderá o problema por mais etapas, ao permitir que
+o Ministério Público (MP) interponha a recusa. Entretanto, o aceite significa o lastro
+probatório do conteúdo produzido pela investigação policial. Até mesmo por isso, sugere-se
+que essa é uma espécie de condenação prévia, já que aceita a validade dos indícios de autoria
+e materialidade que comprometem o réu. Assim, é muito potente a afirmação de
+Schritzmeyer sobre a importância de um vocabulário centrado na evocação de sentimentos
+nas arguições dos promotores e defensores. A discussão não é mais necessariamente sobre o
+cometimento ou não do crime, e sim sobre a legitimidade ou não das condições em que ele
+transcorreu.
+Em relação ao Júri brasileiro, encontramos uma separação entre o “exame da
+personalidade” e o “exame dos fatos” que, em nosso caso, está congregado. No caso
+brasileiro, a personalidade do réu é mesclada aos fatos sem uma interlocução mais profunda
+com as provas testemunhais e as evidências técnico-periciais produzidas no transcorrer do
+inquérito policial. Nesse sentido, “o que chega aos ouvidos e olhos dos jurados, portanto, são
+fragmentos de provas, intencionalmente filtrados e editados” (SCHRITZMEYER, 2022, p.
+62). Figueira também encaminha uma conclusão semelhante ao defender que “o ‘julgamento
+dos fatos’ (seja lá o que isso signifique) não prescinde dos aspectos morais presentes em um
+processo penal” (FIGUEIRA, 2010, p. 316). Assim, é imprescindível levantar questões a
+propósito dos desdobramentos do trabalho técnico-científico-policial na apreensão (ou
+produção) do assassino em série brasileiro. Na maior parte dos casos, o que há de “técnico”
+nos julgamentos dos tribunais envolve muito mais a determinação dos componentes
+motivacionais do crime, as informações obtidas a partir das evidências coletadas e o que elas
+sugerem em termos dos qualificadores e atenuantes do crime, do que algum debate em torno
+de uma suposta qualidade científica das provas. O que temos diante de nós são negociações,
+formações de alianças provisórias e traduções entre diferentes modos de existências -
+jurídicos, científicos, espirituais, morais e etc.
+10 A principal questão que dominou os julgamentos de Francisco foi em torno do seu
+grau de “normalidade” durante o cometimento dos crimes. Diante do diagnóstico da escassez
+de estudos sobre assassinos em série, à época, Bonfim (2004) procura arregimentar
+argumentos produzidos no que ele chamou de “Primeiro Mundo”, capazes de se contrapor à
+tese de semi-imputabilidade de Francisco, apresentada pela defesa. Em suas palavras, era
+necessária uma nova arquitetura:
+Era preciso, pois, que esboçássemos um projeto de nossa acusação, lastreado
+na História, Filosofia, Psiquiatria e variados campos do conhecimento
+humano, mostrando os desajustes de nosso Direito para um criminoso como
+esse, fora-de-série. Era preciso, pois, uma nova arquitetura para a defesa da
+sociedade, mais que sermos simples trabalhadores caseiros (p. 22).
+Não obstante, o alicerce produzido para essa nova arquitetura deveria sustentar sua
+solidez na corte. Caberia ao promotor questionar as avaliações de peritos especializados no
+debate, que sugeriam uma outra punição, baseados no pretexto da inimputabilidade. Apesar
+do livro de Edilson Bonfim ser, em quase sua totalidade, uma transcrição das falas no
+julgamento de Francisco, ele apresenta um caráter monofônico. É como se aquelas sessões
+fossem transformadas em um enorme monólogo da acusação sobre as motivações de um
+assassino em série. Essa obra não comporta, por exemplo, os laudos dos peritos e, tampouco,
+a integridade dos argumentos da defesa, nos reservando um diagnóstico crítico e unilateral
+do estatuto da legislação brasileira e os contornos que ela possibilita para a atuação dos
+peritos na produção de laudos de imputabilidade, segundo visões julgadas como antiquadas
+sobre esses tipos de criminosos. Nesse sentido, ele afirma o seguinte:
+É praticamente consenso na Psiquiatria mundial que os serial-killers são
+irrecuperáveis. Faltando-lhes compaixão pelo “outro” e qualquer sentimento
+de remorso, são movidos unicamente por suas fantasias, que tornam-se a cada
+passo mais fortes e às quais eles não podem - ou não querem - resistir. Não
+existe tratamento eficaz para tais tipos criminosos, uma vez que suas
+personalidades assim estão formadas (...). Quando presos, cada vez que
+conseguem enganar os psiquiatras que os avaliam e, assim, lograr obter a
+liberdade, tornam imediatamente a matar, tal como faziam ou, ainda, de
+forma mais elaborada e cruel (p. 92).
+Assim, é preciso considerar, como sugere Figueira (2010), as divergências em torno
+do próprio sentido de “prova”. A introdução na administração da Justiça de jurados sem
+conhecimentos jurídicos produziu, nas palavras do autor, um “espaço social marcado pelo
+senso comum” (p. 298). Seguindo as regras processuais que regulam o funcionamento do Júri
+brasileiro, nada impede que os jurados desconsiderem as “provas” em detrimento de um
+senso de justiça próprio. Soma-se a isso o fato de que a categoria “prova” não possui uma
+estabilidade semântica no campo jurídico. Ao analisar o contexto das práticas discursivas dos
+11 oficiantes do direito, Figueira constata justamente isso, sinalizando a fragilidade presente na
+distinção entre indício e prova. Enquanto alguns autores defendem que os dois apresentam a
+mesma qualidade, outros justificam que um indício só se sustenta como prova efetiva quando
+submetido ao “contraditório”. Por essa lógica, um inquérito policial, por exemplo, seria
+apenas um indício elaborado para iniciar uma ação penal. Por conseguinte, um indício só se
+tornará prova após a repetição no processo penal, a partir da lógica do contraditório
+(FIGUEIRA, 2010).
+É preciso salientar que existe uma divisão no processo de construção da verdade
+judiciária criminal em dois inquéritos. O primeiro deles, chamado de “inquérito policial”, tem
+como função o convencimento do promotor, que iniciará a ação penal com base nele,
+elaborando uma “denúncia”. Depois, o “inquérito judicial” analisará esses “elementos de
+convicção” produzidos pela Polícia, submetendo-os ao contraditório. Mas mesmo o inquérito
+policial já é um documento editado, submetido a um tratamento procedimental e linguístico
+que o torna apto a ingressar no processo penal, que articula essas provas aos “fatos” e às
+“teses jurídicas”. No interior dessa trama discursiva, diferentes sentidos são atribuídos a esses
+elementos, que desempenharão papéis específicos dentro das estratégias da defesa e da
+acusação - ou seja, “essas narrativas fáticas e esses enunciados-prova são ‘trabalhados’ pelos
+atores ao longo dos procedimentos legais (e não apenas no plenário do júri), objetivando a
+produção de determinados efeitos de poder (p. 307). A articulação desses elementos depende,
+portanto, das “posições enunciativas” dos atores no campo jurídico.
+Ao longo do julgamento do Maníaco, Bonfim travará batalhas acaloradas contra os
+argumentos apresentados pelos peritos, questionando a “fé cega em Ciências inexatas, como a
+Psiquiatria ou a Psicologia” (p. 19). Segundo o promotor, a discussão do modus operandi do
+Maníaco do Parque revelaria, pelo contrário, considerável grau de premeditação por parte do
+assassino. Enquanto isso, o perito Paulo Argarate Vasques defenderia a tese de uma
+“perturbação da saúde mental” do réu, acompanhada por um “transtorno antissocial de
+personalidade”, o que o tornaria justamente inimputável - ou, ao menos, “semi-imputável”. A
+dimensão crucial para o debate não estava em torno da validade ou não da psicologia e da
+psiquiatria no julgamento em questão. Na verdade, o discurso de Bonfim atravessa duas
+esferas diferentes: a primeira delas sendo a determinação do conjunto de teorias e
+pressupostos psiquiátricos mais adequados para julgar as motivações para os homicídios
+cometidos por Francisco; e a segunda é a necessidade da reformulação do código penal com
+12 base em outro entendimento científico sobre a mente e as motivações do assassino em série.
+Bonfim, portanto, considera necessária uma revisão do conceito de “inimputabilidade”. Aqui,
+ele recupera as discussões do VII Colóquio Criminológico, ocorrido em Estrasburgo, no ano
+de 1985. Na ocasião, o psiquiatra Bernheim argumentava a favor de uma “abolição” das
+tentativas da psiquiatria forense de produzir uma avaliação sobre as motivações dos réus.
+Segundo ele, esse tipo de trabalho pericial deveria restringir-se à elaboração de diagnósticos e
+programas de tratamento.
+O promotor chega a sugerir a seguinte medida para avaliar a presença ou não das
+fantasias sexuais no criminoso8
+: através de eletrodos ligados ao pênis do assassino, um
+aparelho mediria o fluxo de sangue no órgão, ao apresentar para o réu imagens associadas às
+suas perversões. Desse modo, supostamente seria possível inferir a continuidade ou não das
+fantasias sexuais. Apesar do promotor afirmar categoricamente que os serial killers são
+“irrecuperáveis”, isso não significa que não devam ser responsabilizados pelas suas ações. O
+próprio Bonfim dirá, afinal, que: “à luz da Ciência ele [Francisco] pode e deve ser
+responsabilizado criminalmente” (p. 138). No entanto, não existiria no Brasil, de acordo com
+o diagnóstico do promotor, nenhum especialista plenamente apto a periciar um criminoso
+desse tipo.
+Então, a melhor perícia para um caso como esse - permitam-me a sinceridade
+- haveria que ser de fora, porque, como o próprio Dr. Paulo Argarate Vasques
+reconheceu, nós não temos ainda uma “Escola Brasileira de Psiquiatria”; e
+não temos nesse tema em particular - serial killer -, grande know-how no
+assunto. O que sabemos é fruto de ideias estrangeiras (p. 140).
+Para decidir a punição do Maníaco do Parque, era preciso revirar os confins da mente
+humana e questionar os fundamentos da motivação assassina. Nesse momento, o embate
+travado entre o promotor e o perito segue uma dicotomia entre temperamento e caráter. A fim
+de determinar a imputabilidade do réu, o promotor discutirá a própria ordenação do
+comportamento humano:
+Assim, um psiquiatra diz: “O temperamento é adquirido” - psiquiatra de
+ontem. Eu digo: mas como que é adquirido? Até onde eu conheço, é uma
+resposta fisiológica da constituição corporal do indivíduo, constituição, essa,
+que ele recebe por herança genética; então, o temperamento é inato, é
+hereditário. “Para mim é adquirido” - ele falou. Eu repliquei: “Olha,
+adquirido é aquilo que só a sociedade moldou, o Senhor não estaria
+equivocado?” “É, não sei” - respondeu. Hoje, eu pergunto ao outro: “Emilio
+Mira y López - que foi meu Professor pelos livros - diz que o temperamento é
+8 A sugestão do promotor toma inspiração direta de uma proposta apresentada por Roger Depue, um dos
+administradores do NCAVC e grande referência nos estudos sobre assassinos em série. O projeto original, no
+entanto, seria voltado para pedófilos e assassinos de crianças, embora Bonfim não especifique o país ou países
+em que um método desse tipo tenha sido efetivamente empregado.
+13 uma resposta fisiológica da constituição corporal do indivíduo que, tal como
+esta, se recebe por herança, é uma condição genética, antropológica dele, e
+não é adquirida, é inata, hereditária. Ele diz: “Está correto!” Então, o outro
+está equivocado? “Está equivocado” - respondeu. Bastou uma noite e uma
+pergunta, em algo que é fundamental. Porque, se o temperamento é adquirido,
+então a culpa é da sociedade toda, porque foi a sociedade que o deformou,
+porque ele teria nascido bom… Mas o caráter não; e é disso que tratamos, o
+caráter é um pouco a propensão dele [...] (p. 191).
+O promotor vai além e questiona se até mesmo o “homossexualismo” não seria
+aprendido, ao passo que o primeiro perito responde: “Para mim, nasce!” (p. 192). Enquanto
+isso, outro perito seria interpelado pela questão “Não pode ser uma opção sexual?” (p. 192,
+grifos meus), respondendo afirmativamente. Embasado nisso, Bonfim planta uma série de
+incertezas quanto à própria validade da psiquiatria para a produção desses laudos. Com base
+na obra Criminologia Analítica, do psiquiatra paranaense Joe Tennyson Vello, o promotor
+explora a pluralidade de correntes teóricas no campo psiquiátrico como um sintoma da
+impossibilidade do consenso necessário para a elaboração de um laudo.
+Portanto, conforme as colocações de Joe Tennyson Vello, até onde um laudo
+assim, para uma hipótese assim, é digno de ser levado a sério? Tem
+cabimento manter uma relação legítima, com a insegurança que a Psiquiatria
+assume, com a problematicidade em torno da liberdade concreta, com a
+ausência de harmonia dos seus desenvolvimentos históricos? (p. 195).
+Diante da impossibilidade de alcançar o grau de certeza que o exercício da justiça
+exige, a sugestão seria excluir totalmente o artigo 26 do código penal, rever as próprias bases
+sobre as quais reside a necessidade de elaboração de laudos psiquiátricos9
+. É esse tipo de
+discussão que produz os maiores efeitos diplomáticos, quando pensamos nos esforços de
+tradução da ciência para o modo de existência jurídico. Se os peritos são incumbidos da tarefa
+de produzir um posicionamento científico sobre a “normalidade”, eles devem fazê-lo sob
+limites específicos impostos pelas condições jurídicas, o que nem sempre produz resultados
+satisfatórios para os actantes envolvidos. A questão do cruzamento de modos de existência
+deve passar por esse tipo de debate, que coloca diferentes entidades envolvidas na elaboração
+de uma forma produtiva e, sobretudo, coletiva de realizar essa tradução. A ciência precisa dar
+uma explicação sobre os assassinos em série, mas a justiça precisa fazer algo sobre seus
+crimes. Enfim, algo sobre o qual promotor e perito puderam concordar: “O art. 26, parágrafo
+único, tem que desaparecer, porque a gente deu um palpite aproximado, mas a gente não
+9
+“Art. 26 - É isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou
+retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de
+determinar-se de acordo com esse entendimento” (Redação dada pela Lei nº 7.209, de 11.7.1984).
+14 sabe” (p. 197), diz um perito. Na mesma linha, o promotor pontua: “não se trata da vigência
+[do artigo 26], o artigo continua em vigor, ninguém vai negar vigência a ele. É que, neste
+caso, de acordo com a Psiquiatria que eu conheço, que mostrei aos Psiquiatras - porque
+muitos deles sequer a conheciam -, a solução é diversa” (p. 191, grifos meus).
+O que foi colocado em questão como ponto de passagem obrigatório foi justamente
+um debate em torno da motivação dos assassinos em série. Responder a essa questão
+interessava tanto aos psiquiatras colocados ali, quanto ao promotor do caso. Apesar de haver
+discordâncias, era impossível passar pelo caso sem emitir uma tese sobre o que moveu o
+Maníaco do Parque em sua onda de homicídios no Parque do Estado. Esse julgamento é
+paradigmático nesse sentido, porque nos permite uma aproximação dos dispositivos de
+interessamento que têm colocado em movimento o “assassino em série”, no Brasil.
+Conclusão: traduzir ciência para os tribunais
+Como pudemos observar no julgamento do Maníaco do Parque, a aplicação das
+técnicas forenses e a produção de evidências materiais ocupa um espaço circunscrito na
+determinação do destino de um assassino em série, uma vez que não se trata de provar ou não
+o cometimento dos crimes por Francisco. O Maníaco já estava posto para o escrutínio dos
+interessados. Sendo um réu confesso, restaria julgá-lo em termos da sua motivação. A
+necessidade urgente estava, portanto, em determinar a maldade daquele indivíduo. Apesar
+dos debates recentes a propósito do que se tem chamado de “virada forense” (forensic turn)
+indicarem uma tendência em andamento de transição de uma “era das testemunhas” para uma
+“era das evidências” (WEIZMAN, 2017), o que temos no caso do Maníaco - e,
+potencialmente, de outros assassinos em série10
+- é uma predileção por outro tipo de
+informação. Porém, isso não significa negar o papel dessa estética forense na construção do
+assassino em série enquanto esse produto de equipamentos caros, exames forenses
+sofisticados, programas de perfilamento criminal; e, ainda assim, nos julgamentos tudo isso
+precisa ser acomodado, uma aliança precisa ser formada.
+Conforme apresentei, o Tribunal do Júri brasileiro, seleciona seus jurados com base
+em um sorteio de cidadãos de “notória idoneidade”, como são chamados. A partir de um
+grupo de, no mínimo, 15 pessoas que se apresentam no tribunal no dia do julgamento, são
+10 Esse trabalho é resultado de uma pesquisa em andamento, cujo objetivo é investigar a produção do “assassino
+em série” e as mediações e traduções às quais esse produto é submetido, durante sua circulação. A pesquisa
+original, financiada pela FAPESP, dá conta de uma variedade maior de situações, que possibilita uma análise dos
+diferentes tratamentos possíveis à questão, incluindo os julgamentos de diferentes serial killers. Nesse sentido,
+ainda resta investigar a possibilidade de estender essa hipótese a outros casos.
+15 sorteados 7 para compor o Júri, sendo que a promotoria e a defensoria podem recusar pelo
+menos 3, cada um, sem precisar justificar o motivo. A decisão desses jurados não exige
+necessariamente uma apreciação técnica das evidências arroladas pelos operadores do direito
+envolvidos no caso, sendo-lhes reservada a possibilidade de julgar com base no princípio da
+íntima convicção, já que não precisam justificar suas escolhas. Diante disso, temos duas
+situações: a primeira, quando o perito é convocado para depor sobre as evidências que
+produziu; depois, quando os advogados, ou promotores, são aqueles que medeiam a relação
+entre a evidência e a narrativa de um crime.
+Em sua etnografia no Metropolitan County Crime Laboratory - nome fictício que a
+autora dá ao seu campo -, Beth Bechky explora os desafios enfrentados pelos cientistas que
+trabalham junto à polícia na produção de evidências, destacando as diferentes representações
+das evidências dentro de cada um dos segmentos do sistema de justiça criminal
+estadunidense. Apesar de raro, ela argumenta que a convocação desses cientistas - chamados
+aqui de “criminalistas” (criminalists) - incute neles um profundo temor, resultado dessa
+percepção do deslocamento de seus conceitos do círculo de partilha de uma linguagem
+comum de onde provêm.
+Os criminalistas sabem que seu trabalho pode acabar em um Tribunal de
+Justiça. Eles se preocupam mais é em aparecerem eles mesmos no tribunal.
+Testemunhar é excepcionalmente raro, mas a possibilidade exoste. Apesar
+de toda reflexão e empenho com que os criminalistas se preparam para o
+tribunal, eles sabem que aparecer no banco das testemunhas é arriscado e
+preocupante. O tribunal do júri é comandado por pessoas que não são
+cientistas e que podem, deliberada ou ignorantemente, utilizar a ciência de
+modos que os criminalistas não previram. Os advogados de defesa podem
+transformar uma pequena falha de um procedimento laboratorial em um
+questionamento sobre a qualidade do trabalho do criminalista; os
+promotores erroneamente acreditam que podem rearranjar uma pequena
+parte da evidência no elo perdido que seu caso necessita. E os jurados, é
+claro, podem confundir completamente a intricada ciência (BECHKY, 2021,
+p. 2, tradução livre).
+Esses encontros podem ser particularmente frustrantes para os criminalistas, porque
+coloca em jogo não só a integridade do produto de seu trabalho, como a credibilidade deles
+mesmos. Um deslize diante dessa platéia de jurados pode ter resultados desastrosos. O
+trabalho de Bechky é uma excelente demonstração das redes heterogêneas que são compostas
+para dar sustentação à produção de uma evidência. Ao colocar em questão os perigos que os
+testes de força nos julgamentos colocam não só para as próprias peças em análise, como para
+os próprios cientistas, ela reforça, segundo esta leitura, a ideia de que criminalista e evidência
+constituem um par quase indissociável, o que coloca desafios para uma reflexão calcada na
+16 “virada forense”. Os relatos trazidos por Bechky dão conta de um esforço de antecipação dos
+criminalistas quanto às situações que enfrentarão na corte. Mas será que as produções desses
+criminalistas se sustentam diante de outros modos de existência, forçados a operar outros
+tipos de relações?11
+A tradução, sendo uma construção de equivalências, comporta uma mudança de
+termos. Nessa montagem provisória de formas produtivas e heterogêneas, o que interessa é
+encontrar uma linguagem equivalente entre o direito e a ciência, para que se possa operar essa
+tradução necessária para a negociação entre modos distintos de produção de existências.
+Considerando que cada prática produz suas próprias realidades materiais, não é como se
+existissem apenas “perspectivas sobre uma única realidade”. Nosso problema passa a ser o de
+investigar as conexões parciais entre essas diferentes realidades. Assim, a naturalização posta
+em ação pelas práticas de purificação, mediação e estabilização tão caras aos modernos e que
+conferem lastro a essa autoridade das evidências científicas, nos julgamentos são postas em
+questão. É nos interstícios desses objetos que aparentemente falam por si só que essa cultura
+jurídica tenta instaurar a fragilidade das inúmeras mediações pelas quais um actante vem a se
+consolidar enquanto um ente descolado do trabalho social incorporado em sua fabricação. Ao
+recuperar as conexões que as evidências estabelecem, os operadores do direito travam um
+combate em torno da legitimidade de determinada alegação. Aqui o objeto científico é
+submetido a um verdadeiro teste de força que inevitavelmente convoca os diversos actantes a
+dar seu testemunho.
+Descrevemos até aqui uma miríade de actantes envolvidos nas negociações em torno
+da problematização do “assassino em série”. Os médicos, os criminólogos, as agências
+policiais e os operadores do direito possuem interesses diversos quanto ao enquadramento do
+problema. A raiz etimológica do verbo “Interessar”, como bem lembra Michel Callon, está
+em “inter-essa”, ou seja, interposto. Interessar a outros atores significa, portanto,
+arregimentar dispositivos capazes de serem interpostos entre eles e todas as outras entidades.
+Nesse sentido, “o interesamento, quando bem-sucedido, confirma (quase totalmente) a
+validade da problematização e da aliança que ela implica” (p. 78). Os esforços estão
+centrados na construção de um sistema e alianças capaz de interromper a formação de
+associações concorrentes, impondo pontos de passagem obrigatórios. O sucesso dessas
+11
+“If it’s a yes or no question just answer yes or no. You don’t need to expand unless they ask you.” She found
+this funny in a particular case when the DA asked her, “So cocaine is a narcotic?” and she said, “Legally, yes,”
+and stopped there, because she does not expand unless asked. “Of course,” she told me, “cocaine is not an actual
+narcotic, it is a stimulant, the complete opposite of a narcotic. But when I said yes, that’s all he cared about! It
+isn’t correct from a technical standpoint, but it is correct under the law” (Idem, p. 144).
+17 práticas é medido pela capacidade de negociar multilateralmente com diferentes aliados a
+pertinência de uma dada problematização, que determina e testa a própria identidade dos
+atores. Assim, os “porta-vozes” são interpostos entre os diferentes especialistas, a partir das
+estratégias descritas, deslocando-os para, em seguida, reuni-los sob uma nova chave. Aquilo
+que se entende por “realidade”, portanto, resulta dessas negociações generalizadas em torno
+da representatividade desses porta-vozes.
+Estamos diante de um trabalho incessante de tradução, a partir do qual os atores
+definem e associam entidades para forjar alianças, posteriormente postas à prova. No entanto,
+“traduzir é deslocar” (p. 91). Isso significa que a tradução do assassino em série também
+opera uma série de deslocamentos e transformações, pois a tradução é a expressão em uma
+linguagem própria acerca do que os outros dizem e querem, o que só é obtido pelo
+estabelecimento de porta-vozes. São eles que relacionam os atores de maneira inteligível e
+legítima. Tomando de empréstimo o esquema elaborado por Callon durante sua análise do
+imbróglio da domesticação das vieiras na baía de Saint-Brieuc, nos anos 1970, elaborei o
+seguinte quadro para ilustrar o sistema de aliança entre as principais entidades envolvidas
+nesse debate:
+Figura 1 - Sistema de alianças formado a partir de um ponto de passagem obrigatório interessante para todas as entidades
+envolvidas na produção do assassino em série
+Como podemos ver, as entidades envolvidas na investigação dos assassinos em série
+se interessam por aspectos diferentes, mas são interpostos por uma mesma questão,
+constroem um sistema de aliança, melhor dizendo. Mas uma aliança que não os exime de
+uma tensão irreprimível, própria aos diplomatas. Assim, os esforços dessas entidades passam
+por um ponto de passagem obrigatório (PPO), que é responder à pergunta “Quais as
+motivações para os assassinatos em série?”, uma questão que permite balizar os anseios
+18 dessas diferentes entidades. Sejam quais forem as metas de cada uma das entidades,
+necessariamente elas passarão por esse tipo de questionamento quanto às motivações de um
+assassino em série, o que permite a formatação de um sistema de alianças provisório.
+Os criminólogos, o FBI e as agências policiais, em geral - isto é, polícia civil, polícia
+militar, polícia científica - apresentam como interesse primordial a tarefa de identificar e
+capturar os autores de homicídios seriais, o que explica a ênfase no desenvolvimento das
+técnicas de perfilamento criminal, bem como de uma série de aparelhos forenses para
+estruturar a cena do crime e determinar o autor. Por outro lado, os psicólogos e psiquiatras
+pretendem responder a um interesse científico de compreensão da “mente” do criminoso.
+Enquanto isso, os ditos operadores do direito tentarão operacionalizar esse debate a fim de
+definir o futuro desses indivíduos, sua imputabilidade. Devemos notar que, por mais que
+essas metas estejam virtualmente separadas, na prática o que ocorre é um intercâmbio
+constante de informações entre essas diferentes entidades, pois suas metas introduzem novos
+nuances ao debate, que se complementam em alguma medida, ao passarem pelo mesmo
+ponto de passagem obrigatório. Esse intercâmbio caracteriza um momento de profunda
+incerteza quanto às motivações desses crimes.
+Para fins de análise, enquadrei uma multiplicidade de atores em entidades
+aparentemente fixas e unificadas, mas certamente existem tensões e negociações constantes
+no interior desses grupos. Não podemos falar, por exemplo, em “psicólogos e psiquiatras”
+desconsiderando as divergências que ali se proliferam. Assim, essas próprias entidades
+também se desdobram em um esquema análogo ao exposto, se ramificando em outras
+entidades e metas, interpondo novos porta-vozes autorizados a falar “em nome” da psiquiatria
+forense, ou “em nome” da psicologia forense, ou “em nome” da criminologia”, ou “em nome
+do direito”.
+Ao longo dos 25 anos desde o início dos crimes de Francisco e a subsequente
+publicização desses assassinatos, a personalidade do Maníaco foi pouco a pouco destrinchada
+sob diferentes exigências. Para as sensitivas, as motivações para os homicídios em série
+estavam na incumbência carmática herdada do avô de Francisco; desde seu nascimento, a
+maldade era inevitável. O programa de televisão soube explorar muito bem esse problema, ao
+articular os depoimentos dados pelo Maníaco às suas experiências no matadouro da família.
+De certa forma, o problema retornava sempre à infância. Quando Marcelo Rezende reconhece
+que “a ciência oficial não consegue traçar um perfil psicológico exato”, apesar do
+sensacionalismo, ele também ecoa os lamúrios do próprio promotor responsável pelas
+acusações, que julgou necessária uma “nova arquitetura”, importada diretamente do
+19 “Primeiro Mundo”. Os laudos elaborados pelos especialistas, no entanto, não encontraram
+tanta força e, em nenhum dos julgamentos, a tese da “semi-normalidade” foi acatada pelos
+jurados. Os debates em torno da diferença entre temperamento e caráter aparentemente
+esclareceram um aspecto importante daqueles crimes escabrosos: o Maníaco poderia ter sido
+evitado, ou melhor, ele poderia ter se controlado. Restaria perguntar às sensitivas se o cajado
+cármico poderia ser de fato destruído. É possível assegurar, por exemplo, que os jurados não
+tenham assistido à entrevista com Francisco? É possível assegurar que o promotor não tenha
+assistido? Sendo a resposta positiva ou negativa, o fato é que o julgamento não cessa suas
+exigências apenas no que surge ali. A todo momento, conexões de ordem moral, espiritual e
+científica se precipitariam, estendendo suas linhas para fora do Fórum. Diante das
+controvérsias envolvendo as múltiplas interpretações da mente do Maníaco e suas
+motivações, não haveria outra solução a não ser convocar cada vez mais entidades e
+colocá-las à prova.
+Em resumo, a existência de um assassino em série - e a possibilidade de julgar essa
+existência - depende de uma série de outras entidades: psicólogos que atestam a aparente
+realidade singular do fenômeno, testemunhas que narram os crimes, familiares e conhecidos
+que falam sobre a vida fora do ato criminoso, familiares e conhecidos que falam sobre a vida
+das vítimas, peritos que coletam as evidências e reconstroem o modus operandi dos
+assassinos, mais peritos para refutar o que os anteriores disseram, juízes, promotores…
+Enfim, uma miríade de entidades12 que se desdobram para condenar, ou melhor, para
+estabilizar uma verdade sobre os assassinos em série. Ademais, é imprescindível que existam
+possibilidades de corte nessa rede, caso contrário a permanência das controvérsias ameaçaria
+todo o projeto jurídico de “fazer justiça”.
+A circulação dessas entidades por essas redes estabilizará pouco a pouco a direção
+supostamente verdadeira dos eventos criminais - nesse caso, a verdade sobre os assassinos em
+série. Mas diante da impossibilidade de contemplar a totalidade de entidades que podem dizer
+algo sobre o crime, ou o criminoso, o processo deve operar justamente um corte nessa rede. A
+estabilidade da qual falávamos significa, portanto, uma interrupção dos fluxos que, não só
+trazem o assassino em série à existência, como o colocam em movimento e circunscrevem a
+natureza do debate. Conforme Strathern pontua: “Assim a força da “lei” corta em uma
+expansão ilimitada da “justiça”, reduzindo-a e tornando-a exprimível, criando no julgamento
+12 Não apenas entidades humanas, diga-se de passagem. Também os documentos, as evidências forenses, as
+câmeras fotográficas, a técnica de eletroforese, o exame de corpo-delito e tantas outras entidades não-humanas
+se impõem nesse processo.
+20 legal um objeto manipulável de uso; a justiça é operacionalizada assim para produzir efeitos
+sociais” (STRATHERN, 2011, p. 6). Nos julgamentos de serial killers, tudo se passa como se
+o ímpeto científico pela compreensão da mente desses criminosos não fosse suficiente,
+porque, no final das contas, o que importa é a operacionalização dessas teorias para a
+produção de efeitos penais concretos. Entretanto, o inverso também é verdade: para a justiça
+é igualmente importante entender cientificamente o tipo de problema que ela tem em mãos.
+Bibliografia
+BONFIM, Edilson. O Julgamento de um Serial Killer (o caso do Maníaco do Parque). São
+Paulo: Malheiros Editores, 2004.
+CALLON, Michel. Elementos para uma sociologia da tradução: a domesticação das vieiras e
+dos pescadores da baía de Saint-Brieuc. In: Alzamora, G., ZILLER, J. e COUTINHO, F.
+Dossiê Bruno Latour, Editora UFMG, 2020.
+FIGUEIRA, Luiz Eduardo. Prova no Tribunal do Júri Brasileiro: o Império da Moral nas
+decisões não fundamentadas. Revista Ciências Sociais, Rio de Janeiro, v. 16, p. 297-322,
+2010.
+ISANOVIC, Adla. Politics and Aesthetics of Databases and Forensics. In: Gržinić, Marina;
+Stojnić, Aneta; Šuvaković, Miško. Regimes of Invisibility in Contemporary Art, Theory
+and Culture: image, racialization, history. Londres: Palgrave Macmillan, 2017.
+JENKINS, Philip. Using Murder: The Social Construction of Serial Homicide. Nova Iorque:
+Routledge. 2017.
+LATOUR, Bruno. Pandora’s hope: essays on the reality of science studies. Cambridge:
+Harvard University Press, 1999.
+_____________. A esperança de Pandora: ensaios sobre a realidade dos estudos científicos.
+São Paulo: Editora Unesp. 2017.
+_____________. Investigação sobre os modos de existência: uma antropologia dos modernos.
+Petrópolis: Editora Vozes. 2019.
+RESSLER, Robert; SCHACHTMAN, Tom. Whoever Fights Monsters: my twenty years
+tracking serial killers for the FBI. Nova Iorque: St. Martin’s Paperbacks. 1993.
+21 SCHRITZMEYER, Ana Lúcia Pastore. Controlando o poder de matar: uma leitura
+antropológica do Tribunal do Júri - ritual lúdico e teatralizado. 2002. Tese (Doutorado em
+Antropologia Social) - Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de
+São Paulo, São Paulo, 2002. doi:10.11606/T.8.2002.tde-31082007-095427. Acesso em:
+2023-11-27.
+_______________. Provas periciais e testemunhais nos plenários dos júris brasileiro e
+francês: reflexões comparativas antropológico-jurídicas. In: PEREIRA E SILVA, Rodrigo
+Faucz; AVELAR, Daniel Ribeiro Surdi de. Estudos em homenagem aos 200 anos do Tribunal
+do Júri no Brasil. São Paulo: Thomson Reuters Brasil, 2022.
+STRATHERN, Marilyn. “Cortando a Rede”, Ponto Urbe [Online], v. 8, 2011.
+WEIZMAN, Eyal. Forensic Architecture: Violence at the Threshold of Detectability. Nova
+Iorque: Zone Books, 2026
+Jeremias é Lula dando cu
